@@ -1,40 +1,59 @@
-import json
 import os
 import sys
-import socket
 import numpy as np
 import tensorflow as tf
 import horovod.tensorflow as hvd
-"""
-def mnist_dataset(batch_size):
-  (x_train, y_train), _ = tf.keras.datasets.mnist.load_data()
-  # The `x` arrays are in uint8 and have values in the [0, 255] range.
-  # You need to convert them to float32 with values in the [0, 1] range.
-  x_train = x_train / np.float32(255)
-  y_train = y_train.astype(np.int64)
+from tensorflow._api.v2 import data
+from tensorflow.python.types.core import Value
 
-  # Set seed to ensure all trials have the same data set
-  train_dataset = tf.data.Dataset.from_tensor_slices(
-      (x_train, y_train)).shuffle(60000, seed=42).repeat().batch(batch_size)
-  return train_dataset
-"""
+# DEFAULT TRAINING SETTINGS
+total_training_batches = 100
+batch_size = 64
 
+try:
+    if len(sys.argv) > 1:
+        total_training_batches = int(sys.argv[1])
+    if len(sys.argv) > 2:
+        batch_size = int(sys.argv[2])
+except ValueError as e:
+    print ("Value error.")
+    print (f"Usage: python {sys.argv[0]} <total_num_batches> <batch_size>")
 
 # Initialize Horovod
 hvd.init()
 
-# Define training setting
-batch_size = 64
-
-# generate MNIST dataset slice depending on local rank
-(mnist_images, mnist_labels), _ = \
-    tf.keras.datasets.mnist.load_data(path='mnist-%d.npz' % hvd.rank())
+# Download entire MNIST dataset
+(mnist_images, mnist_labels), _  = \
+    tf.keras.datasets.mnist.load_data(path='mnist.npz')
 
 dataset = tf.data.Dataset.from_tensor_slices(
     (tf.cast(mnist_images[..., tf.newaxis] / 255.0, tf.float32),
              tf.cast(mnist_labels, tf.int64))
 )
-dataset = dataset.repeat().shuffle(10000, seed=42*hvd.local_rank()).batch(batch_size)
+
+training_slice_per_worker = len(mnist_images) // hvd.size()
+
+# Print training metadata
+print(f"===========")
+print(f"rank: {hvd.rank()}")
+print(f"local_rank: {hvd.local_rank()}")
+if hvd.rank() == 0:
+    print(f"num of workers: {hvd.size()}")
+    print(f"Slice per worker: {training_slice_per_worker}")
+    print(f"Batch size: {batch_size}")
+    print(f"Total amount of batches: {total_training_batches}")
+    print(f"Total amount of examples: {total_training_batches * batch_size}")
+print(f"===========")
+
+
+# Split dataset so that each worker has unique slice of entire MNIST data
+dataset = dataset.skip(training_slice_per_worker*hvd.rank())
+dataset = dataset.take(training_slice_per_worker)
+
+# Shuffle dataset (pseudo-random, so we can reproduce the same splits for each trial)
+dataset = dataset.repeat() \
+                .shuffle(total_training_batches, seed=42) \
+                .batch(batch_size)
 
 # Build the DNN model (deep neural network)
 mnist_model = tf.keras.Sequential([
@@ -63,13 +82,13 @@ mnist_model.compile(
 checkpoint_dir = './checkpoints'
 checkpoint = tf.train.Checkpoint(model=mnist_model, optimizer=opt)
 
+accuracy_metric = tf.keras.metrics.Accuracy()
+
 @tf.function
 def training_step(images, labels, first_batch):
     with tf.GradientTape() as tape:
         probs = mnist_model(images, training=True)
-        predictions = mnist_model(images, training=False)
         loss_value = loss(labels, probs)
-        accuracy = loss(labels, predictions)
 
     # Horovod: add Horovod Distributed GradientTape.
     tape = hvd.DistributedGradientTape(tape)
@@ -77,26 +96,33 @@ def training_step(images, labels, first_batch):
     grads = tape.gradient(loss_value, mnist_model.trainable_variables)
     opt.apply_gradients(zip(grads, mnist_model.trainable_variables))
 
-    # Horovod: broadcast initial variable states from rank 0 to all other processes.
-    # This is necessary to ensure consistent initialization of all workers when
-    # training is started with random weights or restored from a checkpoint.
-
-    # Note: broadcast should be done after the first gradient step to ensure optimizer
-    # initialization.
+    # Broadcast initial model parameters and optimizer variables (sync training step)
+    # This is equivalent to MPI_BCAST
     if first_batch:
         hvd.broadcast_variables(mnist_model.variables, root_rank=0)
         hvd.broadcast_variables(opt.variables(), root_rank=0)
 
-    return loss_value, accuracy
+    return loss_value
 
-# Horovod: adjust number of steps based on number of cluster nodes
-for batch, (images, labels) in enumerate(dataset.take(10000 // hvd.size())):
-    loss_value, accuracy = training_step(images, labels, batch == 0)
+# Split total number of training batches across all workers
+for batch_num, (images, labels) in enumerate(dataset.take(total_training_batches // hvd.size())):
+    loss_value = training_step(images, labels, batch_num == 0)
 
-    if batch % 10 == 0 and hvd.local_rank() == 0:
-        print('Step #%d\tLoss: %.6f\tAccuracy: %.6f' % (batch, loss_value, accuracy))
+    # Printout progress every 10 steps (1 step = 1 batch processed)
+    if batch_num % 10 == 0 and hvd.local_rank() == 0:
+        print('Step #%d (total examples = %d)\tLoss: %.6f' % \
+            (batch_num, batch_num*batch_size, loss_value))
 
-# Horovod: save checkpoints only on worker 0 to prevent other workers from
-# corrupting it.
+# Save model at checkpoint direction (will be overridden at each trial)
+# The checkpoint will not be automatically loaded, 
+# So all trials are independent from each other
 if hvd.rank() == 0:
     checkpoint.save(checkpoint_dir)
+
+    # Evaluate final model with unseen test data from MNIST (10000 examples)
+    _, (test_images, test_labels)= \
+        tf.keras.datasets.mnist.load_data(path='mnist-2.npz')
+
+    results = mnist_model.evaluate(test_images, test_labels, return_dict=True)
+    accuracy = results["accuracy"]
+    print('Final model accuracy: %.6f' % (accuracy))
