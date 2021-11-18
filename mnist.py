@@ -16,9 +16,9 @@ def build_and_compile_cnn_model():
   model = tf.keras.Sequential([
       tf.keras.layers.InputLayer(input_shape=(28, 28)),
       tf.keras.layers.Reshape(target_shape=(28, 28, 1)),
-      tf.keras.layers.Conv2D(32, 3, activation='relu'),
+      tf.keras.layers.Conv2D(32, 6, activation='relu'),
       tf.keras.layers.Flatten(),
-      tf.keras.layers.Dense(128, activation='relu'),
+      tf.keras.layers.Dense(64, activation='relu'),
       tf.keras.layers.Dense(10)
   ])
   model.compile(
