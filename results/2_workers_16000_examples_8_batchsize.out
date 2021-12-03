@@ -1,0 +1,1140 @@
+2021-12-03 20:09:01.636968: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:09:01.637065: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:09:01.652651: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:09:01.652806: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:09:05.442114: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:09:05.442286: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-12-03 20:09:05.442343: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node-0001): /proc/driver/nvidia/version does not exist
+2021-12-03 20:09:05.478481: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2021-12-03 20:09:05.478646: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu-0001
+2021-12-03 20:09:05.478718: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu-0001
+2021-12-03 20:09:05.478826: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 465.19.1
+2021-12-03 20:09:05.478947: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 465.19.1
+2021-12-03 20:09:05.478993: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 465.19.1
+2021-12-03 20:09:05.479929: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+===========
+rank: 1
+===========
+Step #0 (total examples = 0)	Loss: 2.339920
+Step #10 (total examples = 80)	Loss: 2.098872
+Step #20 (total examples = 160)	Loss: 0.780489
+Step #30 (total examples = 240)	Loss: 0.442150
+Step #40 (total examples = 320)	Loss: 0.696613
+Step #50 (total examples = 400)	Loss: 0.603054
+Step #60 (total examples = 480)	Loss: 0.723707
+Step #70 (total examples = 560)	Loss: 0.324456
+Step #80 (total examples = 640)	Loss: 0.203987
+Step #90 (total examples = 720)	Loss: 0.065738
+Step #100 (total examples = 800)	Loss: 0.156262
+Step #110 (total examples = 880)	Loss: 0.075481
+Step #120 (total examples = 960)	Loss: 1.076347
+Step #130 (total examples = 1040)	Loss: 0.228060
+Step #140 (total examples = 1120)	Loss: 0.169314
+Step #150 (total examples = 1200)	Loss: 0.015899
+Step #160 (total examples = 1280)	Loss: 0.355623
+Step #170 (total examples = 1360)	Loss: 0.182085
+Step #180 (total examples = 1440)	Loss: 0.066810
+Step #190 (total examples = 1520)	Loss: 0.060048
+Step #200 (total examples = 1600)	Loss: 0.027531
+Step #210 (total examples = 1680)	Loss: 0.188057
+Step #220 (total examples = 1760)	Loss: 0.511206
+Step #230 (total examples = 1840)	Loss: 0.020972
+Step #240 (total examples = 1920)	Loss: 0.128758
+Step #250 (total examples = 2000)	Loss: 0.017348
+Step #260 (total examples = 2080)	Loss: 0.218211
+Step #270 (total examples = 2160)	Loss: 0.010272
+Step #280 (total examples = 2240)	Loss: 0.472421
+Step #290 (total examples = 2320)	Loss: 0.179401
+Step #300 (total examples = 2400)	Loss: 0.022080
+Step #310 (total examples = 2480)	Loss: 0.188364
+Step #320 (total examples = 2560)	Loss: 0.249416
+Step #330 (total examples = 2640)	Loss: 0.137677
+Step #340 (total examples = 2720)	Loss: 0.004509
+Step #350 (total examples = 2800)	Loss: 0.090914
+Step #360 (total examples = 2880)	Loss: 0.014862
+Step #370 (total examples = 2960)	Loss: 0.047106
+Step #380 (total examples = 3040)	Loss: 0.084460
+Step #390 (total examples = 3120)	Loss: 0.008608
+Step #400 (total examples = 3200)	Loss: 0.001409
+Step #410 (total examples = 3280)	Loss: 0.026970
+Step #420 (total examples = 3360)	Loss: 0.009400
+Step #430 (total examples = 3440)	Loss: 0.366061
+Step #440 (total examples = 3520)	Loss: 0.009398
+Step #450 (total examples = 3600)	Loss: 0.269836
+Step #460 (total examples = 3680)	Loss: 0.114903
+Step #470 (total examples = 3760)	Loss: 0.278237
+Step #480 (total examples = 3840)	Loss: 0.019385
+Step #490 (total examples = 3920)	Loss: 0.747598
+Step #500 (total examples = 4000)	Loss: 0.240178
+Step #510 (total examples = 4080)	Loss: 0.041161
+Step #520 (total examples = 4160)	Loss: 0.128776
+Step #530 (total examples = 4240)	Loss: 0.124220
+Step #540 (total examples = 4320)	Loss: 0.186602
+Step #550 (total examples = 4400)	Loss: 0.026930
+Step #560 (total examples = 4480)	Loss: 0.038592
+Step #570 (total examples = 4560)	Loss: 0.036958
+Step #580 (total examples = 4640)	Loss: 0.052398
+Step #590 (total examples = 4720)	Loss: 0.961913
+Step #600 (total examples = 4800)	Loss: 0.097622
+Step #610 (total examples = 4880)	Loss: 0.449065
+Step #620 (total examples = 4960)	Loss: 0.099166
+Step #630 (total examples = 5040)	Loss: 0.269195
+Step #640 (total examples = 5120)	Loss: 1.069720
+Step #650 (total examples = 5200)	Loss: 0.064190
+Step #660 (total examples = 5280)	Loss: 0.209054
+Step #670 (total examples = 5360)	Loss: 0.050961
+Step #680 (total examples = 5440)	Loss: 0.301761
+Step #690 (total examples = 5520)	Loss: 0.003867
+Step #700 (total examples = 5600)	Loss: 0.027436
+Step #710 (total examples = 5680)	Loss: 0.233806
+Step #720 (total examples = 5760)	Loss: 0.012050
+Step #730 (total examples = 5840)	Loss: 0.575265
+Step #740 (total examples = 5920)	Loss: 0.123969
+Step #750 (total examples = 6000)	Loss: 0.535801
+Step #760 (total examples = 6080)	Loss: 0.038741
+Step #770 (total examples = 6160)	Loss: 0.003265
+Step #780 (total examples = 6240)	Loss: 0.084764
+Step #790 (total examples = 6320)	Loss: 0.008554
+Step #800 (total examples = 6400)	Loss: 0.002176
+Step #810 (total examples = 6480)	Loss: 0.004860
+Step #820 (total examples = 6560)	Loss: 0.124303
+Step #830 (total examples = 6640)	Loss: 0.158913
+Step #840 (total examples = 6720)	Loss: 0.035049
+Step #850 (total examples = 6800)	Loss: 0.238910
+Step #860 (total examples = 6880)	Loss: 0.136404
+Step #870 (total examples = 6960)	Loss: 0.011188
+Step #880 (total examples = 7040)	Loss: 0.393409
+Step #890 (total examples = 7120)	Loss: 0.347114
+Step #900 (total examples = 7200)	Loss: 0.035880
+Step #910 (total examples = 7280)	Loss: 0.114825
+Step #920 (total examples = 7360)	Loss: 0.018948
+Step #930 (total examples = 7440)	Loss: 0.113704
+Step #940 (total examples = 7520)	Loss: 0.097416
+Step #950 (total examples = 7600)	Loss: 0.260896
+Step #960 (total examples = 7680)	Loss: 0.152462
+Step #970 (total examples = 7760)	Loss: 0.060961
+Step #980 (total examples = 7840)	Loss: 0.171978
+Step #990 (total examples = 7920)	Loss: 0.032361
+===========
+rank: 0
+Batch size: 8
+Total number of batches: 2000
+Total training examples: 16000
+Num of workers: 2
+===========
+Step #0 (total examples = 0)	Loss: 2.355733
+Step #10 (total examples = 80)	Loss: 1.895148
+Step #20 (total examples = 160)	Loss: 0.699656
+Step #30 (total examples = 240)	Loss: 0.521482
+Step #40 (total examples = 320)	Loss: 0.261802
+Step #50 (total examples = 400)	Loss: 0.183744
+Step #60 (total examples = 480)	Loss: 0.786518
+Step #70 (total examples = 560)	Loss: 0.228945
+Step #80 (total examples = 640)	Loss: 0.879919
+Step #90 (total examples = 720)	Loss: 1.164326
+Step #100 (total examples = 800)	Loss: 0.242219
+Step #110 (total examples = 880)	Loss: 0.054379
+Step #120 (total examples = 960)	Loss: 0.764384
+Step #130 (total examples = 1040)	Loss: 0.075248
+Step #140 (total examples = 1120)	Loss: 0.512631
+Step #150 (total examples = 1200)	Loss: 0.439472
+Step #160 (total examples = 1280)	Loss: 0.188097
+Step #170 (total examples = 1360)	Loss: 0.128935
+Step #180 (total examples = 1440)	Loss: 0.108104
+Step #190 (total examples = 1520)	Loss: 0.009124
+Step #200 (total examples = 1600)	Loss: 0.055283
+Step #210 (total examples = 1680)	Loss: 0.133181
+Step #220 (total examples = 1760)	Loss: 0.284216
+Step #230 (total examples = 1840)	Loss: 0.198408
+Step #240 (total examples = 1920)	Loss: 0.093840
+Step #250 (total examples = 2000)	Loss: 0.016538
+Step #260 (total examples = 2080)	Loss: 0.028110
+Step #270 (total examples = 2160)	Loss: 0.246150
+Step #280 (total examples = 2240)	Loss: 0.071797
+Step #290 (total examples = 2320)	Loss: 0.156903
+Step #300 (total examples = 2400)	Loss: 0.011732
+Step #310 (total examples = 2480)	Loss: 0.113532
+Step #320 (total examples = 2560)	Loss: 0.319932
+Step #330 (total examples = 2640)	Loss: 0.619887
+Step #340 (total examples = 2720)	Loss: 0.021427
+Step #350 (total examples = 2800)	Loss: 0.127657
+Step #360 (total examples = 2880)	Loss: 0.139605
+Step #370 (total examples = 2960)	Loss: 0.052123
+Step #380 (total examples = 3040)	Loss: 0.025128
+Step #390 (total examples = 3120)	Loss: 0.014207
+Step #400 (total examples = 3200)	Loss: 0.515462
+Step #410 (total examples = 3280)	Loss: 0.442924
+Step #420 (total examples = 3360)	Loss: 0.106752
+Step #430 (total examples = 3440)	Loss: 0.232811
+Step #440 (total examples = 3520)	Loss: 0.121350
+Step #450 (total examples = 3600)	Loss: 0.267112
+Step #460 (total examples = 3680)	Loss: 0.009455
+Step #470 (total examples = 3760)	Loss: 0.289246
+Step #480 (total examples = 3840)	Loss: 0.565188
+Step #490 (total examples = 3920)	Loss: 0.560388
+Step #500 (total examples = 4000)	Loss: 0.026462
+Step #510 (total examples = 4080)	Loss: 0.014076
+Step #520 (total examples = 4160)	Loss: 0.021479
+Step #530 (total examples = 4240)	Loss: 0.004448
+Step #540 (total examples = 4320)	Loss: 0.016021
+Step #550 (total examples = 4400)	Loss: 0.004204
+Step #560 (total examples = 4480)	Loss: 0.473447
+Step #570 (total examples = 4560)	Loss: 0.254744
+Step #580 (total examples = 4640)	Loss: 0.012372
+Step #590 (total examples = 4720)	Loss: 0.050194
+Step #600 (total examples = 4800)	Loss: 0.011133
+Step #610 (total examples = 4880)	Loss: 0.010819
+Step #620 (total examples = 4960)	Loss: 0.025919
+Step #630 (total examples = 5040)	Loss: 0.033764
+Step #640 (total examples = 5120)	Loss: 0.132701
+Step #650 (total examples = 5200)	Loss: 0.046724
+Step #660 (total examples = 5280)	Loss: 0.671655
+Step #670 (total examples = 5360)	Loss: 0.398031
+Step #680 (total examples = 5440)	Loss: 0.026926
+Step #690 (total examples = 5520)	Loss: 0.001215
+Step #700 (total examples = 5600)	Loss: 0.151438
+Step #710 (total examples = 5680)	Loss: 0.004277
+Step #720 (total examples = 5760)	Loss: 0.341833
+Step #730 (total examples = 5840)	Loss: 0.027002
+Step #740 (total examples = 5920)	Loss: 0.015326
+Step #750 (total examples = 6000)	Loss: 0.067829
+Step #760 (total examples = 6080)	Loss: 0.158504
+Step #770 (total examples = 6160)	Loss: 0.040282
+Step #780 (total examples = 6240)	Loss: 0.029426
+Step #790 (total examples = 6320)	Loss: 0.002838
+Step #800 (total examples = 6400)	Loss: 0.024328
+Step #810 (total examples = 6480)	Loss: 0.400708
+Step #820 (total examples = 6560)	Loss: 0.087976
+Step #830 (total examples = 6640)	Loss: 0.293540
+Step #840 (total examples = 6720)	Loss: 0.225741
+Step #850 (total examples = 6800)	Loss: 0.008007
+Step #860 (total examples = 6880)	Loss: 0.227276
+Step #870 (total examples = 6960)	Loss: 0.004963
+Step #880 (total examples = 7040)	Loss: 0.791514
+Step #890 (total examples = 7120)	Loss: 0.741873
+Step #900 (total examples = 7200)	Loss: 0.001576
+Step #910 (total examples = 7280)	Loss: 0.027738
+Step #920 (total examples = 7360)	Loss: 0.034228
+Step #930 (total examples = 7440)	Loss: 0.227843
+Step #940 (total examples = 7520)	Loss: 0.119888
+Step #950 (total examples = 7600)	Loss: 0.341465
+Step #960 (total examples = 7680)	Loss: 0.006357
+Step #970 (total examples = 7760)	Loss: 0.716088
+Step #980 (total examples = 7840)	Loss: 0.123736
+Step #990 (total examples = 7920)	Loss: 0.002878
+  1/313 [..............................] - ETA: 1:49 - loss: 0.0000e+00 - accuracy: 1.0000  5/313 [..............................] - ETA: 4s - loss: 5.1592 - accuracy: 0.9937        9/313 [..............................] - ETA: 4s - loss: 5.6553 - accuracy: 0.9861 13/313 [>.............................] - ETA: 4s - loss: 13.4501 - accuracy: 0.9808 17/313 [>.............................] - ETA: 4s - loss: 15.8740 - accuracy: 0.9743 20/313 [>.............................] - ETA: 4s - loss: 14.5254 - accuracy: 0.9750 22/313 [=>............................] - ETA: 5s - loss: 13.6699 - accuracy: 0.9744 24/313 [=>............................] - ETA: 5s - loss: 15.2675 - accuracy: 0.9727 26/313 [=>............................] - ETA: 5s - loss: 14.0931 - accuracy: 0.9748 28/313 [=>............................] - ETA: 5s - loss: 14.7835 - accuracy: 0.9732 30/313 [=>............................] - ETA: 5s - loss: 15.0304 - accuracy: 0.9740 32/313 [==>...........................] - ETA: 6s - loss: 17.1036 - accuracy: 0.9727 34/313 [==>...........................] - ETA: 6s - loss: 17.1728 - accuracy: 0.9724 36/313 [==>...........................] - ETA: 6s - loss: 17.1530 - accuracy: 0.9722 38/313 [==>...........................] - ETA: 6s - loss: 18.1425 - accuracy: 0.9704 40/313 [==>...........................] - ETA: 6s - loss: 19.9562 - accuracy: 0.9672 42/313 [===>..........................] - ETA: 6s - loss: 20.6996 - accuracy: 0.9650 44/313 [===>..........................] - ETA: 6s - loss: 20.7923 - accuracy: 0.9645 46/313 [===>..........................] - ETA: 6s - loss: 19.8883 - accuracy: 0.9660 48/313 [===>..........................] - ETA: 6s - loss: 20.3341 - accuracy: 0.9655 50/313 [===>..........................] - ETA: 6s - loss: 20.8770 - accuracy: 0.9644 52/313 [===>..........................] - ETA: 6s - loss: 20.7385 - accuracy: 0.9639 55/313 [====>.........................] - ETA: 6s - loss: 21.0830 - accuracy: 0.9631 59/313 [====>.........................] - ETA: 6s - loss: 20.2487 - accuracy: 0.9645 63/313 [=====>........................] - ETA: 6s - loss: 19.3934 - accuracy: 0.9653 67/313 [=====>........................] - ETA: 5s - loss: 23.2211 - accuracy: 0.9627 71/313 [=====>........................] - ETA: 5s - loss: 23.3374 - accuracy: 0.9626 75/313 [======>.......................] - ETA: 5s - loss: 24.2556 - accuracy: 0.9617 79/313 [======>.......................] - ETA: 5s - loss: 24.3736 - accuracy: 0.9612 82/313 [======>.......................] - ETA: 5s - loss: 23.9490 - accuracy: 0.9619 85/313 [=======>......................] - ETA: 5s - loss: 23.5651 - accuracy: 0.9621 89/313 [=======>......................] - ETA: 4s - loss: 23.0769 - accuracy: 0.9624 93/313 [=======>......................] - ETA: 4s - loss: 23.5681 - accuracy: 0.9624 97/313 [========>.....................] - ETA: 4s - loss: 23.5849 - accuracy: 0.9623101/313 [========>.....................] - ETA: 4s - loss: 22.7424 - accuracy: 0.9632105/313 [=========>....................] - ETA: 4s - loss: 21.9690 - accuracy: 0.9640109/313 [=========>....................] - ETA: 4s - loss: 21.3209 - accuracy: 0.9642113/313 [=========>....................] - ETA: 4s - loss: 22.6436 - accuracy: 0.9638117/313 [==========>...................] - ETA: 4s - loss: 22.2378 - accuracy: 0.9634121/313 [==========>...................] - ETA: 3s - loss: 22.9152 - accuracy: 0.9623125/313 [==========>...................] - ETA: 3s - loss: 22.8157 - accuracy: 0.9628128/313 [===========>..................] - ETA: 3s - loss: 22.8710 - accuracy: 0.9626132/313 [===========>..................] - ETA: 3s - loss: 22.8731 - accuracy: 0.9624136/313 [============>.................] - ETA: 3s - loss: 22.8385 - accuracy: 0.9623140/313 [============>.................] - ETA: 3s - loss: 22.5006 - accuracy: 0.9629144/313 [============>.................] - ETA: 3s - loss: 22.8231 - accuracy: 0.9627148/313 [=============>................] - ETA: 3s - loss: 22.4249 - accuracy: 0.9624152/313 [=============>................] - ETA: 3s - loss: 22.5229 - accuracy: 0.9624156/313 [=============>................] - ETA: 3s - loss: 22.3434 - accuracy: 0.9621159/313 [==============>...............] - ETA: 3s - loss: 21.9814 - accuracy: 0.9627162/313 [==============>...............] - ETA: 2s - loss: 21.6528 - accuracy: 0.9632166/313 [==============>...............] - ETA: 2s - loss: 21.2303 - accuracy: 0.9637170/313 [===============>..............] - ETA: 2s - loss: 20.8899 - accuracy: 0.9643174/313 [===============>..............] - ETA: 2s - loss: 20.4097 - accuracy: 0.9652178/313 [================>.............] - ETA: 2s - loss: 20.0943 - accuracy: 0.9654182/313 [================>.............] - ETA: 2s - loss: 19.8763 - accuracy: 0.9658186/313 [================>.............] - ETA: 2s - loss: 20.0871 - accuracy: 0.9659190/313 [=================>............] - ETA: 2s - loss: 20.5927 - accuracy: 0.9650194/313 [=================>............] - ETA: 2s - loss: 21.0272 - accuracy: 0.9644198/313 [=================>............] - ETA: 2s - loss: 20.7228 - accuracy: 0.9650202/313 [==================>...........] - ETA: 2s - loss: 20.3124 - accuracy: 0.9657206/313 [==================>...........] - ETA: 2s - loss: 20.6038 - accuracy: 0.9659210/313 [===================>..........] - ETA: 1s - loss: 20.8013 - accuracy: 0.9656214/313 [===================>..........] - ETA: 1s - loss: 20.6354 - accuracy: 0.9658218/313 [===================>..........] - ETA: 1s - loss: 20.2568 - accuracy: 0.9665222/313 [====================>.........] - ETA: 1s - loss: 19.8918 - accuracy: 0.9671226/313 [====================>.........] - ETA: 1s - loss: 19.5677 - accuracy: 0.9675230/313 [=====================>........] - ETA: 1s - loss: 19.2274 - accuracy: 0.9681234/313 [=====================>........] - ETA: 1s - loss: 19.0536 - accuracy: 0.9683238/313 [=====================>........] - ETA: 1s - loss: 18.7731 - accuracy: 0.9686242/313 [======================>.......] - ETA: 1s - loss: 18.4628 - accuracy: 0.9691246/313 [======================>.......] - ETA: 1s - loss: 18.2321 - accuracy: 0.9694250/313 [======================>.......] - ETA: 1s - loss: 17.9697 - accuracy: 0.9697254/313 [=======================>......] - ETA: 1s - loss: 17.9322 - accuracy: 0.9700258/313 [=======================>......] - ETA: 1s - loss: 17.6753 - accuracy: 0.9703262/313 [========================>.....] - ETA: 0s - loss: 17.5595 - accuracy: 0.9704266/313 [========================>.....] - ETA: 0s - loss: 17.3720 - accuracy: 0.9704270/313 [========================>.....] - ETA: 0s - loss: 17.1147 - accuracy: 0.9708274/313 [=========================>....] - ETA: 0s - loss: 16.8648 - accuracy: 0.9713278/313 [=========================>....] - ETA: 0s - loss: 16.6222 - accuracy: 0.9717282/313 [==========================>...] - ETA: 0s - loss: 16.6364 - accuracy: 0.9717286/313 [==========================>...] - ETA: 0s - loss: 16.4877 - accuracy: 0.9718290/313 [==========================>...] - ETA: 0s - loss: 16.2603 - accuracy: 0.9722294/313 [===========================>..] - ETA: 0s - loss: 16.0391 - accuracy: 0.9726298/313 [===========================>..] - ETA: 0s - loss: 15.8924 - accuracy: 0.9728302/313 [===========================>..] - ETA: 0s - loss: 15.7535 - accuracy: 0.9729306/313 [============================>.] - ETA: 0s - loss: 16.3968 - accuracy: 0.9723310/313 [============================>.] - ETA: 0s - loss: 16.5973 - accuracy: 0.9720313/313 [==============================] - 6s 18ms/step - loss: 16.5899 - accuracy: 0.9719
+Final model accuracy: 0.971900
+Total training time: 91.451118
+2021-12-03 20:10:46.909738: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:10:46.909847: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:10:46.980961: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:10:46.981154: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:10:50.741248: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2021-12-03 20:10:50.741433: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu-0001
+2021-12-03 20:10:50.741484: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu-0001
+2021-12-03 20:10:50.741587: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 465.19.1
+2021-12-03 20:10:50.741704: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 465.19.1
+2021-12-03 20:10:50.741758: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 465.19.1
+2021-12-03 20:10:50.742672: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-12-03 20:10:50.760839: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:10:50.761003: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-12-03 20:10:50.761085: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node-0001): /proc/driver/nvidia/version does not exist
+===========
+rank: 1
+===========
+Step #0 (total examples = 0)	Loss: 2.376409
+Step #10 (total examples = 80)	Loss: 2.009349
+Step #20 (total examples = 160)	Loss: 0.970138
+Step #30 (total examples = 240)	Loss: 0.231358
+Step #40 (total examples = 320)	Loss: 0.339525
+Step #50 (total examples = 400)	Loss: 0.541914
+Step #60 (total examples = 480)	Loss: 0.611589
+Step #70 (total examples = 560)	Loss: 0.288610
+Step #80 (total examples = 640)	Loss: 0.272219
+Step #90 (total examples = 720)	Loss: 0.230970
+Step #100 (total examples = 800)	Loss: 0.214277
+Step #110 (total examples = 880)	Loss: 0.083949
+Step #120 (total examples = 960)	Loss: 0.552275
+Step #130 (total examples = 1040)	Loss: 0.049046
+Step #140 (total examples = 1120)	Loss: 1.372106
+Step #150 (total examples = 1200)	Loss: 0.100745
+Step #160 (total examples = 1280)	Loss: 0.038455
+Step #170 (total examples = 1360)	Loss: 0.209216
+Step #180 (total examples = 1440)	Loss: 0.061549
+Step #190 (total examples = 1520)	Loss: 0.013970
+Step #200 (total examples = 1600)	Loss: 0.164335
+Step #210 (total examples = 1680)	Loss: 0.011397
+Step #220 (total examples = 1760)	Loss: 0.647235
+Step #230 (total examples = 1840)	Loss: 0.055179
+Step #240 (total examples = 1920)	Loss: 0.037888
+Step #250 (total examples = 2000)	Loss: 0.072379
+Step #260 (total examples = 2080)	Loss: 0.594612
+Step #270 (total examples = 2160)	Loss: 0.011915
+Step #280 (total examples = 2240)	Loss: 0.942222
+Step #290 (total examples = 2320)	Loss: 0.226472
+Step #300 (total examples = 2400)	Loss: 0.040970
+Step #310 (total examples = 2480)	Loss: 0.099486
+Step #320 (total examples = 2560)	Loss: 0.437826
+Step #330 (total examples = 2640)	Loss: 0.217401
+Step #340 (total examples = 2720)	Loss: 0.001461
+Step #350 (total examples = 2800)	Loss: 0.068319
+Step #360 (total examples = 2880)	Loss: 0.017231
+Step #370 (total examples = 2960)	Loss: 0.029064
+Step #380 (total examples = 3040)	Loss: 0.028114
+Step #390 (total examples = 3120)	Loss: 0.169393
+Step #400 (total examples = 3200)	Loss: 0.018836
+Step #410 (total examples = 3280)	Loss: 0.156217
+Step #420 (total examples = 3360)	Loss: 0.199345
+Step #430 (total examples = 3440)	Loss: 0.481003
+Step #440 (total examples = 3520)	Loss: 0.198912
+Step #450 (total examples = 3600)	Loss: 0.081187
+Step #460 (total examples = 3680)	Loss: 0.057932
+Step #470 (total examples = 3760)	Loss: 0.176741
+Step #480 (total examples = 3840)	Loss: 0.010267
+Step #490 (total examples = 3920)	Loss: 0.800152
+Step #500 (total examples = 4000)	Loss: 0.415153
+Step #510 (total examples = 4080)	Loss: 0.046305
+Step #520 (total examples = 4160)	Loss: 0.187864
+Step #530 (total examples = 4240)	Loss: 0.139727
+Step #540 (total examples = 4320)	Loss: 0.005554
+Step #550 (total examples = 4400)	Loss: 0.045983
+Step #560 (total examples = 4480)	Loss: 0.025623
+Step #570 (total examples = 4560)	Loss: 0.151007
+Step #580 (total examples = 4640)	Loss: 0.064982
+Step #590 (total examples = 4720)	Loss: 0.836238
+Step #600 (total examples = 4800)	Loss: 0.084082
+Step #610 (total examples = 4880)	Loss: 0.053111
+Step #620 (total examples = 4960)	Loss: 0.458173
+Step #630 (total examples = 5040)	Loss: 0.106103
+Step #640 (total examples = 5120)	Loss: 0.558960
+Step #650 (total examples = 5200)	Loss: 0.018656
+Step #660 (total examples = 5280)	Loss: 0.437561
+Step #670 (total examples = 5360)	Loss: 0.058767
+Step #680 (total examples = 5440)	Loss: 0.427087
+Step #690 (total examples = 5520)	Loss: 0.042471
+Step #700 (total examples = 5600)	Loss: 0.019328
+Step #710 (total examples = 5680)	Loss: 0.098401
+Step #720 (total examples = 5760)	Loss: 0.378936
+Step #730 (total examples = 5840)	Loss: 0.379081
+Step #740 (total examples = 5920)	Loss: 0.356726
+Step #750 (total examples = 6000)	Loss: 0.272628
+Step #760 (total examples = 6080)	Loss: 0.212154
+Step #770 (total examples = 6160)	Loss: 0.006170
+Step #780 (total examples = 6240)	Loss: 0.359713
+Step #790 (total examples = 6320)	Loss: 0.271996
+Step #800 (total examples = 6400)	Loss: 0.021711
+Step #810 (total examples = 6480)	Loss: 0.041185
+Step #820 (total examples = 6560)	Loss: 0.222283
+Step #830 (total examples = 6640)	Loss: 0.363780
+Step #840 (total examples = 6720)	Loss: 0.117974
+Step #850 (total examples = 6800)	Loss: 0.376285
+Step #860 (total examples = 6880)	Loss: 0.163910
+Step #870 (total examples = 6960)	Loss: 0.037739
+Step #880 (total examples = 7040)	Loss: 0.116327
+Step #890 (total examples = 7120)	Loss: 0.510975
+Step #900 (total examples = 7200)	Loss: 0.118536
+Step #910 (total examples = 7280)	Loss: 0.027975
+Step #920 (total examples = 7360)	Loss: 0.402976
+Step #930 (total examples = 7440)	Loss: 0.270873
+Step #940 (total examples = 7520)	Loss: 0.005407
+Step #950 (total examples = 7600)	Loss: 0.143899
+Step #960 (total examples = 7680)	Loss: 0.026000
+Step #970 (total examples = 7760)	Loss: 0.060285
+Step #980 (total examples = 7840)	Loss: 0.294006
+Step #990 (total examples = 7920)	Loss: 0.070735
+===========
+rank: 0
+Batch size: 8
+Total number of batches: 2000
+Total training examples: 16000
+Num of workers: 2
+===========
+Step #0 (total examples = 0)	Loss: 2.335055
+Step #10 (total examples = 80)	Loss: 1.481897
+Step #20 (total examples = 160)	Loss: 0.522029
+Step #30 (total examples = 240)	Loss: 0.449137
+Step #40 (total examples = 320)	Loss: 0.514779
+Step #50 (total examples = 400)	Loss: 0.235076
+Step #60 (total examples = 480)	Loss: 0.781827
+Step #70 (total examples = 560)	Loss: 0.192949
+Step #80 (total examples = 640)	Loss: 0.413563
+Step #90 (total examples = 720)	Loss: 0.762931
+Step #100 (total examples = 800)	Loss: 0.496951
+Step #110 (total examples = 880)	Loss: 0.076472
+Step #120 (total examples = 960)	Loss: 0.203001
+Step #130 (total examples = 1040)	Loss: 0.059145
+Step #140 (total examples = 1120)	Loss: 0.931759
+Step #150 (total examples = 1200)	Loss: 0.209732
+Step #160 (total examples = 1280)	Loss: 0.068796
+Step #170 (total examples = 1360)	Loss: 0.048361
+Step #180 (total examples = 1440)	Loss: 0.373753
+Step #190 (total examples = 1520)	Loss: 0.176789
+Step #200 (total examples = 1600)	Loss: 0.063502
+Step #210 (total examples = 1680)	Loss: 0.117844
+Step #220 (total examples = 1760)	Loss: 0.029704
+Step #230 (total examples = 1840)	Loss: 0.265509
+Step #240 (total examples = 1920)	Loss: 0.131947
+Step #250 (total examples = 2000)	Loss: 0.065366
+Step #260 (total examples = 2080)	Loss: 0.022092
+Step #270 (total examples = 2160)	Loss: 0.084789
+Step #280 (total examples = 2240)	Loss: 0.225347
+Step #290 (total examples = 2320)	Loss: 0.102289
+Step #300 (total examples = 2400)	Loss: 0.242340
+Step #310 (total examples = 2480)	Loss: 0.026496
+Step #320 (total examples = 2560)	Loss: 0.186478
+Step #330 (total examples = 2640)	Loss: 0.375574
+Step #340 (total examples = 2720)	Loss: 0.016487
+Step #350 (total examples = 2800)	Loss: 0.188581
+Step #360 (total examples = 2880)	Loss: 0.090110
+Step #370 (total examples = 2960)	Loss: 0.152824
+Step #380 (total examples = 3040)	Loss: 0.273591
+Step #390 (total examples = 3120)	Loss: 0.001551
+Step #400 (total examples = 3200)	Loss: 0.068821
+Step #410 (total examples = 3280)	Loss: 0.717882
+Step #420 (total examples = 3360)	Loss: 0.685468
+Step #430 (total examples = 3440)	Loss: 0.641069
+Step #440 (total examples = 3520)	Loss: 0.427565
+Step #450 (total examples = 3600)	Loss: 0.032390
+Step #460 (total examples = 3680)	Loss: 0.005589
+Step #470 (total examples = 3760)	Loss: 0.006634
+Step #480 (total examples = 3840)	Loss: 0.186975
+Step #490 (total examples = 3920)	Loss: 0.944835
+Step #500 (total examples = 4000)	Loss: 0.087818
+Step #510 (total examples = 4080)	Loss: 0.005120
+Step #520 (total examples = 4160)	Loss: 0.017078
+Step #530 (total examples = 4240)	Loss: 0.007076
+Step #540 (total examples = 4320)	Loss: 0.012495
+Step #550 (total examples = 4400)	Loss: 0.003290
+Step #560 (total examples = 4480)	Loss: 0.073867
+Step #570 (total examples = 4560)	Loss: 0.042557
+Step #580 (total examples = 4640)	Loss: 0.055477
+Step #590 (total examples = 4720)	Loss: 0.044603
+Step #600 (total examples = 4800)	Loss: 0.003705
+Step #610 (total examples = 4880)	Loss: 0.041764
+Step #620 (total examples = 4960)	Loss: 0.031653
+Step #630 (total examples = 5040)	Loss: 0.034512
+Step #640 (total examples = 5120)	Loss: 0.296517
+Step #650 (total examples = 5200)	Loss: 0.016398
+Step #660 (total examples = 5280)	Loss: 0.620475
+Step #670 (total examples = 5360)	Loss: 0.560810
+Step #680 (total examples = 5440)	Loss: 0.004381
+Step #690 (total examples = 5520)	Loss: 0.060659
+Step #700 (total examples = 5600)	Loss: 0.024820
+Step #710 (total examples = 5680)	Loss: 0.014433
+Step #720 (total examples = 5760)	Loss: 0.143580
+Step #730 (total examples = 5840)	Loss: 0.100954
+Step #740 (total examples = 5920)	Loss: 0.018492
+Step #750 (total examples = 6000)	Loss: 0.026393
+Step #760 (total examples = 6080)	Loss: 0.074241
+Step #770 (total examples = 6160)	Loss: 0.065554
+Step #780 (total examples = 6240)	Loss: 0.109014
+Step #790 (total examples = 6320)	Loss: 0.008912
+Step #800 (total examples = 6400)	Loss: 0.096876
+Step #810 (total examples = 6480)	Loss: 0.293690
+Step #820 (total examples = 6560)	Loss: 0.190045
+Step #830 (total examples = 6640)	Loss: 0.612786
+Step #840 (total examples = 6720)	Loss: 0.077919
+Step #850 (total examples = 6800)	Loss: 0.064454
+Step #860 (total examples = 6880)	Loss: 0.152197
+Step #870 (total examples = 6960)	Loss: 0.002017
+Step #880 (total examples = 7040)	Loss: 0.300011
+Step #890 (total examples = 7120)	Loss: 0.466677
+Step #900 (total examples = 7200)	Loss: 0.218884
+Step #910 (total examples = 7280)	Loss: 0.018804
+Step #920 (total examples = 7360)	Loss: 0.029597
+Step #930 (total examples = 7440)	Loss: 0.303835
+Step #940 (total examples = 7520)	Loss: 0.048762
+Step #950 (total examples = 7600)	Loss: 0.094083
+Step #960 (total examples = 7680)	Loss: 0.704798
+Step #970 (total examples = 7760)	Loss: 0.389354
+Step #980 (total examples = 7840)	Loss: 0.117301
+Step #990 (total examples = 7920)	Loss: 0.013277
+  1/313 [..............................] - ETA: 1:49 - loss: 6.3645 - accuracy: 0.9375  4/313 [..............................] - ETA: 5s - loss: 4.4890 - accuracy: 0.9609    7/313 [..............................] - ETA: 5s - loss: 7.4458 - accuracy: 0.9732 11/313 [>.............................] - ETA: 5s - loss: 22.1567 - accuracy: 0.9574 14/313 [>.............................] - ETA: 5s - loss: 26.0361 - accuracy: 0.9554 17/313 [>.............................] - ETA: 5s - loss: 24.2557 - accuracy: 0.9522 21/313 [=>............................] - ETA: 4s - loss: 21.0124 - accuracy: 0.9583 24/313 [=>............................] - ETA: 5s - loss: 19.2709 - accuracy: 0.9596 26/313 [=>............................] - ETA: 5s - loss: 17.9060 - accuracy: 0.9615 28/313 [=>............................] - ETA: 5s - loss: 16.8490 - accuracy: 0.9632 30/313 [=>............................] - ETA: 5s - loss: 18.0709 - accuracy: 0.9615 32/313 [==>...........................] - ETA: 6s - loss: 19.9366 - accuracy: 0.9619 34/313 [==>...........................] - ETA: 6s - loss: 20.1833 - accuracy: 0.9614 36/313 [==>...........................] - ETA: 6s - loss: 19.4356 - accuracy: 0.9609 38/313 [==>...........................] - ETA: 6s - loss: 20.4708 - accuracy: 0.9613 40/313 [==>...........................] - ETA: 6s - loss: 22.1332 - accuracy: 0.9594 42/313 [===>..........................] - ETA: 6s - loss: 24.6176 - accuracy: 0.9576 44/313 [===>..........................] - ETA: 6s - loss: 24.9771 - accuracy: 0.9574 46/313 [===>..........................] - ETA: 6s - loss: 24.2989 - accuracy: 0.9572 48/313 [===>..........................] - ETA: 6s - loss: 24.0063 - accuracy: 0.9577 50/313 [===>..........................] - ETA: 6s - loss: 24.1326 - accuracy: 0.9569 52/313 [===>..........................] - ETA: 6s - loss: 23.5910 - accuracy: 0.9567 54/313 [====>.........................] - ETA: 6s - loss: 25.4650 - accuracy: 0.9566 57/313 [====>.........................] - ETA: 6s - loss: 24.4805 - accuracy: 0.9567 60/313 [====>.........................] - ETA: 6s - loss: 23.8804 - accuracy: 0.9573 63/313 [=====>........................] - ETA: 6s - loss: 23.2059 - accuracy: 0.9583 66/313 [=====>........................] - ETA: 5s - loss: 25.4266 - accuracy: 0.9564 69/313 [=====>........................] - ETA: 5s - loss: 27.5652 - accuracy: 0.9547 72/313 [=====>........................] - ETA: 5s - loss: 27.9566 - accuracy: 0.9540 75/313 [======>.......................] - ETA: 5s - loss: 27.9586 - accuracy: 0.9546 78/313 [======>.......................] - ETA: 5s - loss: 27.5009 - accuracy: 0.9539 81/313 [======>.......................] - ETA: 5s - loss: 26.8899 - accuracy: 0.9545 84/313 [=======>......................] - ETA: 5s - loss: 26.4237 - accuracy: 0.9546 87/313 [=======>......................] - ETA: 5s - loss: 26.2877 - accuracy: 0.9537 90/313 [=======>......................] - ETA: 4s - loss: 25.6814 - accuracy: 0.9542 93/313 [=======>......................] - ETA: 4s - loss: 26.2729 - accuracy: 0.9546 96/313 [========>.....................] - ETA: 4s - loss: 26.5300 - accuracy: 0.9541 99/313 [========>.....................] - ETA: 4s - loss: 26.3065 - accuracy: 0.9549102/313 [========>.....................] - ETA: 4s - loss: 25.5420 - accuracy: 0.9559105/313 [=========>....................] - ETA: 4s - loss: 24.8122 - accuracy: 0.9571108/313 [=========>....................] - ETA: 4s - loss: 24.5525 - accuracy: 0.9578111/313 [=========>....................] - ETA: 4s - loss: 25.1241 - accuracy: 0.9572114/313 [=========>....................] - ETA: 4s - loss: 25.1927 - accuracy: 0.9575117/313 [==========>...................] - ETA: 4s - loss: 24.7742 - accuracy: 0.9578120/313 [==========>...................] - ETA: 4s - loss: 25.2392 - accuracy: 0.9570123/313 [==========>...................] - ETA: 3s - loss: 25.5609 - accuracy: 0.9566126/313 [===========>..................] - ETA: 3s - loss: 25.3928 - accuracy: 0.9563129/313 [===========>..................] - ETA: 3s - loss: 25.4788 - accuracy: 0.9566132/313 [===========>..................] - ETA: 3s - loss: 25.5174 - accuracy: 0.9567135/313 [===========>..................] - ETA: 3s - loss: 25.6964 - accuracy: 0.9567138/313 [============>.................] - ETA: 3s - loss: 25.7106 - accuracy: 0.9563141/313 [============>.................] - ETA: 3s - loss: 25.6219 - accuracy: 0.9561145/313 [============>.................] - ETA: 3s - loss: 25.4032 - accuracy: 0.9563149/313 [=============>................] - ETA: 3s - loss: 25.0649 - accuracy: 0.9566153/313 [=============>................] - ETA: 3s - loss: 25.2865 - accuracy: 0.9561156/313 [=============>................] - ETA: 3s - loss: 24.8534 - accuracy: 0.9563159/313 [==============>...............] - ETA: 3s - loss: 24.3845 - accuracy: 0.9572162/313 [==============>...............] - ETA: 2s - loss: 23.9329 - accuracy: 0.9579165/313 [==============>...............] - ETA: 2s - loss: 23.5526 - accuracy: 0.9585168/313 [===============>..............] - ETA: 2s - loss: 23.3022 - accuracy: 0.9589171/313 [===============>..............] - ETA: 2s - loss: 22.8934 - accuracy: 0.9596175/313 [===============>..............] - ETA: 2s - loss: 22.5128 - accuracy: 0.9600179/313 [================>.............] - ETA: 2s - loss: 22.0885 - accuracy: 0.9607183/313 [================>.............] - ETA: 2s - loss: 21.6645 - accuracy: 0.9612187/313 [================>.............] - ETA: 2s - loss: 22.0562 - accuracy: 0.9611191/313 [=================>............] - ETA: 2s - loss: 22.0126 - accuracy: 0.9607195/313 [=================>............] - ETA: 2s - loss: 22.3289 - accuracy: 0.9604199/313 [==================>...........] - ETA: 2s - loss: 21.8801 - accuracy: 0.9612203/313 [==================>...........] - ETA: 2s - loss: 21.4489 - accuracy: 0.9620207/313 [==================>...........] - ETA: 2s - loss: 21.6793 - accuracy: 0.9621211/313 [===================>..........] - ETA: 1s - loss: 21.6924 - accuracy: 0.9622215/313 [===================>..........] - ETA: 1s - loss: 21.2888 - accuracy: 0.9629219/313 [===================>..........] - ETA: 1s - loss: 20.9000 - accuracy: 0.9636223/313 [====================>.........] - ETA: 1s - loss: 20.6156 - accuracy: 0.9641227/313 [====================>.........] - ETA: 1s - loss: 20.2753 - accuracy: 0.9646231/313 [=====================>........] - ETA: 1s - loss: 19.9242 - accuracy: 0.9652235/313 [=====================>........] - ETA: 1s - loss: 19.7477 - accuracy: 0.9653239/313 [=====================>........] - ETA: 1s - loss: 19.4172 - accuracy: 0.9659243/313 [======================>.......] - ETA: 1s - loss: 19.0976 - accuracy: 0.9664247/313 [======================>.......] - ETA: 1s - loss: 18.8247 - accuracy: 0.9666251/313 [=======================>......] - ETA: 1s - loss: 18.5716 - accuracy: 0.9670255/313 [=======================>......] - ETA: 1s - loss: 18.4476 - accuracy: 0.9672259/313 [=======================>......] - ETA: 0s - loss: 18.1627 - accuracy: 0.9677263/313 [========================>.....] - ETA: 0s - loss: 18.0273 - accuracy: 0.9679267/313 [========================>.....] - ETA: 0s - loss: 17.8689 - accuracy: 0.9683271/313 [========================>.....] - ETA: 0s - loss: 17.6052 - accuracy: 0.9688275/313 [=========================>....] - ETA: 0s - loss: 17.3491 - accuracy: 0.9692279/313 [=========================>....] - ETA: 0s - loss: 17.1004 - accuracy: 0.9696283/313 [==========================>...] - ETA: 0s - loss: 17.1429 - accuracy: 0.9696287/313 [==========================>...] - ETA: 0s - loss: 16.9678 - accuracy: 0.9699291/313 [==========================>...] - ETA: 0s - loss: 16.7523 - accuracy: 0.9703295/313 [===========================>..] - ETA: 0s - loss: 16.5420 - accuracy: 0.9706299/313 [===========================>..] - ETA: 0s - loss: 16.3207 - accuracy: 0.9709303/313 [============================>.] - ETA: 0s - loss: 16.2809 - accuracy: 0.9708307/313 [============================>.] - ETA: 0s - loss: 16.7919 - accuracy: 0.9703311/313 [============================>.] - ETA: 0s - loss: 17.2276 - accuracy: 0.9698313/313 [==============================] - 6s 18ms/step - loss: 17.2001 - accuracy: 0.9697
+Final model accuracy: 0.969700
+Total training time: 92.285019
+2021-12-03 20:12:31.122905: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:12:31.123077: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:12:31.172959: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:12:31.173108: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:12:35.235782: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2021-12-03 20:12:35.235958: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu-0001
+2021-12-03 20:12:35.236008: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu-0001
+2021-12-03 20:12:35.236112: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 465.19.1
+2021-12-03 20:12:35.236240: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 465.19.1
+2021-12-03 20:12:35.236286: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 465.19.1
+2021-12-03 20:12:35.237215: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-12-03 20:12:35.287019: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:12:35.287411: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-12-03 20:12:35.287473: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node-0001): /proc/driver/nvidia/version does not exist
+===========
+rank: 1
+===========
+Step #0 (total examples = 0)	Loss: 2.296860
+Step #10 (total examples = 80)	Loss: 2.051350
+Step #20 (total examples = 160)	Loss: 1.227300
+Step #30 (total examples = 240)	Loss: 0.611731
+Step #40 (total examples = 320)	Loss: 0.307293
+Step #50 (total examples = 400)	Loss: 0.513680
+Step #60 (total examples = 480)	Loss: 1.112068
+Step #70 (total examples = 560)	Loss: 0.334549
+Step #80 (total examples = 640)	Loss: 0.378623
+Step #90 (total examples = 720)	Loss: 0.080951
+Step #100 (total examples = 800)	Loss: 0.227911
+Step #110 (total examples = 880)	Loss: 0.309339
+Step #120 (total examples = 960)	Loss: 0.826562
+Step #130 (total examples = 1040)	Loss: 0.133707
+Step #140 (total examples = 1120)	Loss: 0.588520
+Step #150 (total examples = 1200)	Loss: 0.011805
+Step #160 (total examples = 1280)	Loss: 0.523353
+Step #170 (total examples = 1360)	Loss: 0.475166
+Step #180 (total examples = 1440)	Loss: 0.083399
+Step #190 (total examples = 1520)	Loss: 0.102250
+Step #200 (total examples = 1600)	Loss: 0.240661
+Step #210 (total examples = 1680)	Loss: 0.273920
+Step #220 (total examples = 1760)	Loss: 0.326380
+Step #230 (total examples = 1840)	Loss: 0.023987
+Step #240 (total examples = 1920)	Loss: 0.062752
+Step #250 (total examples = 2000)	Loss: 0.086718
+Step #260 (total examples = 2080)	Loss: 0.905764
+Step #270 (total examples = 2160)	Loss: 0.112717
+Step #280 (total examples = 2240)	Loss: 0.252847
+Step #290 (total examples = 2320)	Loss: 0.062748
+Step #300 (total examples = 2400)	Loss: 0.026057
+Step #310 (total examples = 2480)	Loss: 0.181180
+Step #320 (total examples = 2560)	Loss: 0.366015
+Step #330 (total examples = 2640)	Loss: 0.146307
+Step #340 (total examples = 2720)	Loss: 0.006205
+Step #350 (total examples = 2800)	Loss: 0.004641
+Step #360 (total examples = 2880)	Loss: 0.010141
+Step #370 (total examples = 2960)	Loss: 0.076234
+Step #380 (total examples = 3040)	Loss: 0.004846
+Step #390 (total examples = 3120)	Loss: 0.149615
+Step #400 (total examples = 3200)	Loss: 0.159094
+Step #410 (total examples = 3280)	Loss: 0.137134
+Step #420 (total examples = 3360)	Loss: 0.023797
+Step #430 (total examples = 3440)	Loss: 0.364424
+Step #440 (total examples = 3520)	Loss: 0.020416
+Step #450 (total examples = 3600)	Loss: 0.153364
+Step #460 (total examples = 3680)	Loss: 0.041877
+Step #470 (total examples = 3760)	Loss: 0.043067
+Step #480 (total examples = 3840)	Loss: 0.138473
+Step #490 (total examples = 3920)	Loss: 0.809616
+Step #500 (total examples = 4000)	Loss: 0.323295
+Step #510 (total examples = 4080)	Loss: 0.260357
+Step #520 (total examples = 4160)	Loss: 0.244203
+Step #530 (total examples = 4240)	Loss: 0.031988
+Step #540 (total examples = 4320)	Loss: 0.180989
+Step #550 (total examples = 4400)	Loss: 0.318787
+Step #560 (total examples = 4480)	Loss: 0.017552
+Step #570 (total examples = 4560)	Loss: 0.061561
+Step #580 (total examples = 4640)	Loss: 0.018816
+Step #590 (total examples = 4720)	Loss: 1.153215
+Step #600 (total examples = 4800)	Loss: 0.195447
+Step #610 (total examples = 4880)	Loss: 0.144384
+Step #620 (total examples = 4960)	Loss: 0.435627
+Step #630 (total examples = 5040)	Loss: 0.452896
+Step #640 (total examples = 5120)	Loss: 0.907893
+Step #650 (total examples = 5200)	Loss: 0.059163
+Step #660 (total examples = 5280)	Loss: 0.183899
+Step #670 (total examples = 5360)	Loss: 0.053398
+Step #680 (total examples = 5440)	Loss: 0.399843
+Step #690 (total examples = 5520)	Loss: 0.013892
+Step #700 (total examples = 5600)	Loss: 0.043633
+Step #710 (total examples = 5680)	Loss: 0.139535
+Step #720 (total examples = 5760)	Loss: 0.022908
+Step #730 (total examples = 5840)	Loss: 0.185898
+Step #740 (total examples = 5920)	Loss: 0.097582
+Step #750 (total examples = 6000)	Loss: 0.578213
+Step #760 (total examples = 6080)	Loss: 0.050662
+Step #770 (total examples = 6160)	Loss: 0.120568
+Step #780 (total examples = 6240)	Loss: 0.020461
+Step #790 (total examples = 6320)	Loss: 0.015740
+Step #800 (total examples = 6400)	Loss: 0.041234
+Step #810 (total examples = 6480)	Loss: 0.093460
+Step #820 (total examples = 6560)	Loss: 0.093178
+Step #830 (total examples = 6640)	Loss: 0.049172
+Step #840 (total examples = 6720)	Loss: 0.021691
+Step #850 (total examples = 6800)	Loss: 0.492122
+Step #860 (total examples = 6880)	Loss: 0.242770
+Step #870 (total examples = 6960)	Loss: 0.032183
+Step #880 (total examples = 7040)	Loss: 0.438003
+Step #890 (total examples = 7120)	Loss: 1.012357
+Step #900 (total examples = 7200)	Loss: 0.104988
+Step #910 (total examples = 7280)	Loss: 0.177553
+Step #920 (total examples = 7360)	Loss: 0.024039
+Step #930 (total examples = 7440)	Loss: 0.098303
+Step #940 (total examples = 7520)	Loss: 0.051486
+Step #950 (total examples = 7600)	Loss: 0.273836
+Step #960 (total examples = 7680)	Loss: 0.020102
+Step #970 (total examples = 7760)	Loss: 0.005444
+Step #980 (total examples = 7840)	Loss: 0.115243
+Step #990 (total examples = 7920)	Loss: 0.175541
+===========
+rank: 0
+Batch size: 8
+Total number of batches: 2000
+Total training examples: 16000
+Num of workers: 2
+===========
+Step #0 (total examples = 0)	Loss: 2.320718
+Step #10 (total examples = 80)	Loss: 1.795567
+Step #20 (total examples = 160)	Loss: 0.606031
+Step #30 (total examples = 240)	Loss: 0.342931
+Step #40 (total examples = 320)	Loss: 0.423842
+Step #50 (total examples = 400)	Loss: 0.188904
+Step #60 (total examples = 480)	Loss: 0.809418
+Step #70 (total examples = 560)	Loss: 0.468257
+Step #80 (total examples = 640)	Loss: 0.385047
+Step #90 (total examples = 720)	Loss: 1.043976
+Step #100 (total examples = 800)	Loss: 0.586362
+Step #110 (total examples = 880)	Loss: 0.025915
+Step #120 (total examples = 960)	Loss: 0.256915
+Step #130 (total examples = 1040)	Loss: 0.248726
+Step #140 (total examples = 1120)	Loss: 0.181669
+Step #150 (total examples = 1200)	Loss: 0.151256
+Step #160 (total examples = 1280)	Loss: 0.049267
+Step #170 (total examples = 1360)	Loss: 0.081575
+Step #180 (total examples = 1440)	Loss: 0.077384
+Step #190 (total examples = 1520)	Loss: 0.045639
+Step #200 (total examples = 1600)	Loss: 0.057655
+Step #210 (total examples = 1680)	Loss: 0.061408
+Step #220 (total examples = 1760)	Loss: 0.084233
+Step #230 (total examples = 1840)	Loss: 0.249326
+Step #240 (total examples = 1920)	Loss: 0.229529
+Step #250 (total examples = 2000)	Loss: 0.002417
+Step #260 (total examples = 2080)	Loss: 0.148260
+Step #270 (total examples = 2160)	Loss: 0.096161
+Step #280 (total examples = 2240)	Loss: 0.476803
+Step #290 (total examples = 2320)	Loss: 0.042148
+Step #300 (total examples = 2400)	Loss: 0.070387
+Step #310 (total examples = 2480)	Loss: 0.111198
+Step #320 (total examples = 2560)	Loss: 0.128670
+Step #330 (total examples = 2640)	Loss: 0.301067
+Step #340 (total examples = 2720)	Loss: 0.023397
+Step #350 (total examples = 2800)	Loss: 0.019285
+Step #360 (total examples = 2880)	Loss: 0.016941
+Step #370 (total examples = 2960)	Loss: 0.377269
+Step #380 (total examples = 3040)	Loss: 0.298738
+Step #390 (total examples = 3120)	Loss: 0.003449
+Step #400 (total examples = 3200)	Loss: 0.167472
+Step #410 (total examples = 3280)	Loss: 0.170879
+Step #420 (total examples = 3360)	Loss: 0.335545
+Step #430 (total examples = 3440)	Loss: 0.171910
+Step #440 (total examples = 3520)	Loss: 0.183825
+Step #450 (total examples = 3600)	Loss: 0.055329
+Step #460 (total examples = 3680)	Loss: 0.067954
+Step #470 (total examples = 3760)	Loss: 0.016032
+Step #480 (total examples = 3840)	Loss: 0.905091
+Step #490 (total examples = 3920)	Loss: 1.219362
+Step #500 (total examples = 4000)	Loss: 0.198693
+Step #510 (total examples = 4080)	Loss: 0.005567
+Step #520 (total examples = 4160)	Loss: 0.020825
+Step #530 (total examples = 4240)	Loss: 0.006242
+Step #540 (total examples = 4320)	Loss: 0.013313
+Step #550 (total examples = 4400)	Loss: 0.025351
+Step #560 (total examples = 4480)	Loss: 0.311285
+Step #570 (total examples = 4560)	Loss: 0.016629
+Step #580 (total examples = 4640)	Loss: 0.009031
+Step #590 (total examples = 4720)	Loss: 0.127291
+Step #600 (total examples = 4800)	Loss: 0.007409
+Step #610 (total examples = 4880)	Loss: 0.018137
+Step #620 (total examples = 4960)	Loss: 0.010196
+Step #630 (total examples = 5040)	Loss: 0.003158
+Step #640 (total examples = 5120)	Loss: 0.233420
+Step #650 (total examples = 5200)	Loss: 0.157375
+Step #660 (total examples = 5280)	Loss: 0.822210
+Step #670 (total examples = 5360)	Loss: 0.964740
+Step #680 (total examples = 5440)	Loss: 0.016618
+Step #690 (total examples = 5520)	Loss: 0.109139
+Step #700 (total examples = 5600)	Loss: 0.035379
+Step #710 (total examples = 5680)	Loss: 0.015795
+Step #720 (total examples = 5760)	Loss: 0.094601
+Step #730 (total examples = 5840)	Loss: 0.159980
+Step #740 (total examples = 5920)	Loss: 0.089222
+Step #750 (total examples = 6000)	Loss: 0.006091
+Step #760 (total examples = 6080)	Loss: 0.021860
+Step #770 (total examples = 6160)	Loss: 0.049870
+Step #780 (total examples = 6240)	Loss: 0.010029
+Step #790 (total examples = 6320)	Loss: 0.091626
+Step #800 (total examples = 6400)	Loss: 0.013235
+Step #810 (total examples = 6480)	Loss: 0.178468
+Step #820 (total examples = 6560)	Loss: 0.216285
+Step #830 (total examples = 6640)	Loss: 0.172555
+Step #840 (total examples = 6720)	Loss: 0.010448
+Step #850 (total examples = 6800)	Loss: 0.031093
+Step #860 (total examples = 6880)	Loss: 0.103264
+Step #870 (total examples = 6960)	Loss: 0.005468
+Step #880 (total examples = 7040)	Loss: 0.656659
+Step #890 (total examples = 7120)	Loss: 0.580492
+Step #900 (total examples = 7200)	Loss: 0.003622
+Step #910 (total examples = 7280)	Loss: 0.032258
+Step #920 (total examples = 7360)	Loss: 0.003378
+Step #930 (total examples = 7440)	Loss: 0.072827
+Step #940 (total examples = 7520)	Loss: 0.000822
+Step #950 (total examples = 7600)	Loss: 0.039555
+Step #960 (total examples = 7680)	Loss: 0.119589
+Step #970 (total examples = 7760)	Loss: 0.225526
+Step #980 (total examples = 7840)	Loss: 0.023913
+Step #990 (total examples = 7920)	Loss: 0.008157
+  1/313 [..............................] - ETA: 1:47 - loss: 20.0937 - accuracy: 0.9688  5/313 [..............................] - ETA: 4s - loss: 14.0360 - accuracy: 0.9750    9/313 [..............................] - ETA: 4s - loss: 17.7283 - accuracy: 0.9722 13/313 [>.............................] - ETA: 4s - loss: 17.7460 - accuracy: 0.9639 17/313 [>.............................] - ETA: 4s - loss: 20.1100 - accuracy: 0.9614 21/313 [=>............................] - ETA: 4s - loss: 18.1499 - accuracy: 0.9643 24/313 [=>............................] - ETA: 4s - loss: 17.9265 - accuracy: 0.9648 26/313 [=>............................] - ETA: 4s - loss: 16.8454 - accuracy: 0.9663 28/313 [=>............................] - ETA: 5s - loss: 16.3969 - accuracy: 0.9676 30/313 [=>............................] - ETA: 5s - loss: 18.8089 - accuracy: 0.9656 32/313 [==>...........................] - ETA: 5s - loss: 20.8159 - accuracy: 0.9658 34/313 [==>...........................] - ETA: 5s - loss: 20.6927 - accuracy: 0.9642 36/313 [==>...........................] - ETA: 5s - loss: 20.9304 - accuracy: 0.9635 38/313 [==>...........................] - ETA: 5s - loss: 21.8762 - accuracy: 0.9630 40/313 [==>...........................] - ETA: 6s - loss: 23.5162 - accuracy: 0.9617 42/313 [===>..........................] - ETA: 6s - loss: 24.0869 - accuracy: 0.9606 44/313 [===>..........................] - ETA: 6s - loss: 24.2263 - accuracy: 0.9602 46/313 [===>..........................] - ETA: 6s - loss: 23.6493 - accuracy: 0.9613 48/313 [===>..........................] - ETA: 6s - loss: 23.7636 - accuracy: 0.9609 50/313 [===>..........................] - ETA: 6s - loss: 23.7206 - accuracy: 0.9594 52/313 [===>..........................] - ETA: 6s - loss: 22.9132 - accuracy: 0.9597 54/313 [====>.........................] - ETA: 6s - loss: 24.1810 - accuracy: 0.9589 56/313 [====>.........................] - ETA: 6s - loss: 23.8711 - accuracy: 0.9593 60/313 [====>.........................] - ETA: 6s - loss: 23.3105 - accuracy: 0.9589 64/313 [=====>........................] - ETA: 5s - loss: 23.1795 - accuracy: 0.9585 68/313 [=====>........................] - ETA: 5s - loss: 26.2940 - accuracy: 0.9568 72/313 [=====>........................] - ETA: 5s - loss: 26.6593 - accuracy: 0.9557 76/313 [======>.......................] - ETA: 5s - loss: 27.0398 - accuracy: 0.9548 80/313 [======>.......................] - ETA: 5s - loss: 27.2210 - accuracy: 0.9543 84/313 [=======>......................] - ETA: 4s - loss: 27.3683 - accuracy: 0.9542 87/313 [=======>......................] - ETA: 4s - loss: 26.7263 - accuracy: 0.9547 91/313 [=======>......................] - ETA: 4s - loss: 26.4490 - accuracy: 0.9550 95/313 [========>.....................] - ETA: 4s - loss: 26.7173 - accuracy: 0.9553 99/313 [========>.....................] - ETA: 4s - loss: 26.5483 - accuracy: 0.9552103/313 [========>.....................] - ETA: 4s - loss: 26.0693 - accuracy: 0.9560107/313 [=========>....................] - ETA: 4s - loss: 25.6713 - accuracy: 0.9568111/313 [=========>....................] - ETA: 4s - loss: 25.7636 - accuracy: 0.9569115/313 [==========>...................] - ETA: 3s - loss: 25.6903 - accuracy: 0.9571119/313 [==========>...................] - ETA: 3s - loss: 25.7255 - accuracy: 0.9561123/313 [==========>...................] - ETA: 3s - loss: 26.3266 - accuracy: 0.9560127/313 [===========>..................] - ETA: 3s - loss: 26.1962 - accuracy: 0.9560131/313 [===========>..................] - ETA: 3s - loss: 26.5434 - accuracy: 0.9563135/313 [===========>..................] - ETA: 3s - loss: 27.1812 - accuracy: 0.9558139/313 [============>.................] - ETA: 3s - loss: 26.6030 - accuracy: 0.9564143/313 [============>.................] - ETA: 3s - loss: 26.9793 - accuracy: 0.9563147/313 [=============>................] - ETA: 3s - loss: 26.3889 - accuracy: 0.9568151/313 [=============>................] - ETA: 3s - loss: 26.3389 - accuracy: 0.9570155/313 [=============>................] - ETA: 3s - loss: 26.1320 - accuracy: 0.9569159/313 [==============>...............] - ETA: 2s - loss: 25.5550 - accuracy: 0.9575163/313 [==============>...............] - ETA: 2s - loss: 25.0503 - accuracy: 0.9582167/313 [===============>..............] - ETA: 2s - loss: 24.4638 - accuracy: 0.9590171/313 [===============>..............] - ETA: 2s - loss: 23.8916 - accuracy: 0.9600175/313 [===============>..............] - ETA: 2s - loss: 23.3455 - accuracy: 0.9609179/313 [================>.............] - ETA: 2s - loss: 22.9011 - accuracy: 0.9612183/313 [================>.............] - ETA: 2s - loss: 22.7790 - accuracy: 0.9614187/313 [================>.............] - ETA: 2s - loss: 23.1093 - accuracy: 0.9612191/313 [=================>............] - ETA: 2s - loss: 23.1590 - accuracy: 0.9607195/313 [=================>............] - ETA: 2s - loss: 23.6538 - accuracy: 0.9604199/313 [==================>...........] - ETA: 2s - loss: 23.1783 - accuracy: 0.9612203/313 [==================>...........] - ETA: 2s - loss: 22.7875 - accuracy: 0.9618207/313 [==================>...........] - ETA: 1s - loss: 23.0924 - accuracy: 0.9618211/313 [===================>..........] - ETA: 1s - loss: 22.9977 - accuracy: 0.9621215/313 [===================>..........] - ETA: 1s - loss: 22.5698 - accuracy: 0.9628219/313 [===================>..........] - ETA: 1s - loss: 22.1576 - accuracy: 0.9635223/313 [====================>.........] - ETA: 1s - loss: 21.7811 - accuracy: 0.9640227/313 [====================>.........] - ETA: 1s - loss: 21.4000 - accuracy: 0.9645231/313 [=====================>........] - ETA: 1s - loss: 21.0294 - accuracy: 0.9651235/313 [=====================>........] - ETA: 1s - loss: 20.8813 - accuracy: 0.9652239/313 [=====================>........] - ETA: 1s - loss: 20.5318 - accuracy: 0.9657243/313 [======================>.......] - ETA: 1s - loss: 20.1938 - accuracy: 0.9663247/313 [======================>.......] - ETA: 1s - loss: 20.0246 - accuracy: 0.9663251/313 [=======================>......] - ETA: 1s - loss: 19.7931 - accuracy: 0.9668255/313 [=======================>......] - ETA: 1s - loss: 19.6896 - accuracy: 0.9668259/313 [=======================>......] - ETA: 0s - loss: 19.5246 - accuracy: 0.9672263/313 [========================>.....] - ETA: 0s - loss: 19.3271 - accuracy: 0.9674267/313 [========================>.....] - ETA: 0s - loss: 19.0591 - accuracy: 0.9678271/313 [========================>.....] - ETA: 0s - loss: 18.7778 - accuracy: 0.9683275/313 [=========================>....] - ETA: 0s - loss: 18.5047 - accuracy: 0.9688279/313 [=========================>....] - ETA: 0s - loss: 18.2394 - accuracy: 0.9692283/313 [==========================>...] - ETA: 0s - loss: 18.2527 - accuracy: 0.9692287/313 [==========================>...] - ETA: 0s - loss: 18.0007 - accuracy: 0.9695291/313 [==========================>...] - ETA: 0s - loss: 17.7532 - accuracy: 0.9699295/313 [===========================>..] - ETA: 0s - loss: 17.5125 - accuracy: 0.9703299/313 [===========================>..] - ETA: 0s - loss: 17.2782 - accuracy: 0.9707303/313 [============================>.] - ETA: 0s - loss: 17.1526 - accuracy: 0.9707307/313 [============================>.] - ETA: 0s - loss: 17.4934 - accuracy: 0.9703311/313 [============================>.] - ETA: 0s - loss: 17.7541 - accuracy: 0.9699313/313 [==============================] - 6s 17ms/step - loss: 17.8223 - accuracy: 0.9698
+Final model accuracy: 0.969800
+Total training time: 92.608791
+2021-12-03 20:14:16.723459: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:14:16.723565: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:14:16.746123: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:14:16.746289: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:14:20.886451: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:14:20.886565: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-12-03 20:14:20.886625: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node-0001): /proc/driver/nvidia/version does not exist
+2021-12-03 20:14:20.909894: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2021-12-03 20:14:20.910052: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu-0001
+2021-12-03 20:14:20.910101: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu-0001
+2021-12-03 20:14:20.910527: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 465.19.1
+2021-12-03 20:14:20.910651: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 465.19.1
+2021-12-03 20:14:20.910698: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 465.19.1
+2021-12-03 20:14:20.911815: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+===========
+rank: 1
+===========
+Step #0 (total examples = 0)	Loss: 2.305391
+Step #10 (total examples = 80)	Loss: 1.999262
+Step #20 (total examples = 160)	Loss: 0.793457
+Step #30 (total examples = 240)	Loss: 0.309574
+Step #40 (total examples = 320)	Loss: 0.627584
+Step #50 (total examples = 400)	Loss: 0.557792
+Step #60 (total examples = 480)	Loss: 0.564045
+Step #70 (total examples = 560)	Loss: 0.449833
+Step #80 (total examples = 640)	Loss: 0.172772
+Step #90 (total examples = 720)	Loss: 0.063976
+Step #100 (total examples = 800)	Loss: 0.092385
+Step #110 (total examples = 880)	Loss: 0.097646
+Step #120 (total examples = 960)	Loss: 0.694536
+Step #130 (total examples = 1040)	Loss: 0.353992
+Step #140 (total examples = 1120)	Loss: 0.491316
+Step #150 (total examples = 1200)	Loss: 0.029020
+Step #160 (total examples = 1280)	Loss: 0.132337
+Step #170 (total examples = 1360)	Loss: 0.100269
+Step #180 (total examples = 1440)	Loss: 0.317026
+Step #190 (total examples = 1520)	Loss: 0.208877
+Step #200 (total examples = 1600)	Loss: 0.130402
+Step #210 (total examples = 1680)	Loss: 0.016572
+Step #220 (total examples = 1760)	Loss: 0.253961
+Step #230 (total examples = 1840)	Loss: 0.152327
+Step #240 (total examples = 1920)	Loss: 0.154623
+Step #250 (total examples = 2000)	Loss: 0.053339
+Step #260 (total examples = 2080)	Loss: 0.166388
+Step #270 (total examples = 2160)	Loss: 0.004389
+Step #280 (total examples = 2240)	Loss: 0.160143
+Step #290 (total examples = 2320)	Loss: 0.103439
+Step #300 (total examples = 2400)	Loss: 0.083758
+Step #310 (total examples = 2480)	Loss: 0.041903
+Step #320 (total examples = 2560)	Loss: 1.014591
+Step #330 (total examples = 2640)	Loss: 0.125584
+Step #340 (total examples = 2720)	Loss: 0.010398
+Step #350 (total examples = 2800)	Loss: 0.282543
+Step #360 (total examples = 2880)	Loss: 0.010151
+Step #370 (total examples = 2960)	Loss: 0.016774
+Step #380 (total examples = 3040)	Loss: 0.019772
+Step #390 (total examples = 3120)	Loss: 0.263509
+Step #400 (total examples = 3200)	Loss: 0.059100
+Step #410 (total examples = 3280)	Loss: 0.124396
+Step #420 (total examples = 3360)	Loss: 0.067966
+Step #430 (total examples = 3440)	Loss: 0.368267
+Step #440 (total examples = 3520)	Loss: 0.005647
+Step #450 (total examples = 3600)	Loss: 0.294247
+Step #460 (total examples = 3680)	Loss: 0.044970
+Step #470 (total examples = 3760)	Loss: 0.406801
+Step #480 (total examples = 3840)	Loss: 0.199667
+Step #490 (total examples = 3920)	Loss: 0.902270
+Step #500 (total examples = 4000)	Loss: 0.179902
+Step #510 (total examples = 4080)	Loss: 0.028293
+Step #520 (total examples = 4160)	Loss: 0.060556
+Step #530 (total examples = 4240)	Loss: 0.140653
+Step #540 (total examples = 4320)	Loss: 0.066208
+Step #550 (total examples = 4400)	Loss: 0.166431
+Step #560 (total examples = 4480)	Loss: 0.060964
+Step #570 (total examples = 4560)	Loss: 0.051614
+Step #580 (total examples = 4640)	Loss: 0.079924
+Step #590 (total examples = 4720)	Loss: 0.439085
+Step #600 (total examples = 4800)	Loss: 0.023468
+Step #610 (total examples = 4880)	Loss: 0.128678
+Step #620 (total examples = 4960)	Loss: 0.151470
+Step #630 (total examples = 5040)	Loss: 0.025605
+Step #640 (total examples = 5120)	Loss: 0.475820
+Step #650 (total examples = 5200)	Loss: 0.089650
+Step #660 (total examples = 5280)	Loss: 0.737290
+Step #670 (total examples = 5360)	Loss: 0.398409
+Step #680 (total examples = 5440)	Loss: 0.507952
+Step #690 (total examples = 5520)	Loss: 0.056743
+Step #700 (total examples = 5600)	Loss: 0.027729
+Step #710 (total examples = 5680)	Loss: 0.174660
+Step #720 (total examples = 5760)	Loss: 0.299177
+Step #730 (total examples = 5840)	Loss: 0.576531
+Step #740 (total examples = 5920)	Loss: 0.084118
+Step #750 (total examples = 6000)	Loss: 0.272268
+Step #760 (total examples = 6080)	Loss: 0.148747
+Step #770 (total examples = 6160)	Loss: 0.047354
+Step #780 (total examples = 6240)	Loss: 0.023305
+Step #790 (total examples = 6320)	Loss: 0.027941
+Step #800 (total examples = 6400)	Loss: 0.019992
+Step #810 (total examples = 6480)	Loss: 0.349359
+Step #820 (total examples = 6560)	Loss: 0.098083
+Step #830 (total examples = 6640)	Loss: 0.036327
+Step #840 (total examples = 6720)	Loss: 0.082473
+Step #850 (total examples = 6800)	Loss: 0.183841
+Step #860 (total examples = 6880)	Loss: 0.173197
+Step #870 (total examples = 6960)	Loss: 0.023549
+Step #880 (total examples = 7040)	Loss: 0.376164
+Step #890 (total examples = 7120)	Loss: 0.558283
+Step #900 (total examples = 7200)	Loss: 0.101641
+Step #910 (total examples = 7280)	Loss: 0.081189
+Step #920 (total examples = 7360)	Loss: 0.137801
+Step #930 (total examples = 7440)	Loss: 0.265282
+Step #940 (total examples = 7520)	Loss: 0.000755
+Step #950 (total examples = 7600)	Loss: 0.368257
+Step #960 (total examples = 7680)	Loss: 0.059499
+Step #970 (total examples = 7760)	Loss: 0.008942
+Step #980 (total examples = 7840)	Loss: 0.377893
+Step #990 (total examples = 7920)	Loss: 0.140056
+===========
+rank: 0
+Batch size: 8
+Total number of batches: 2000
+Total training examples: 16000
+Num of workers: 2
+===========
+Step #0 (total examples = 0)	Loss: 2.295065
+Step #10 (total examples = 80)	Loss: 1.772003
+Step #20 (total examples = 160)	Loss: 0.529630
+Step #30 (total examples = 240)	Loss: 0.318485
+Step #40 (total examples = 320)	Loss: 0.200090
+Step #50 (total examples = 400)	Loss: 0.164392
+Step #60 (total examples = 480)	Loss: 0.708923
+Step #70 (total examples = 560)	Loss: 0.185441
+Step #80 (total examples = 640)	Loss: 0.305173
+Step #90 (total examples = 720)	Loss: 1.309374
+Step #100 (total examples = 800)	Loss: 0.629872
+Step #110 (total examples = 880)	Loss: 0.058116
+Step #120 (total examples = 960)	Loss: 0.089867
+Step #130 (total examples = 1040)	Loss: 0.045110
+Step #140 (total examples = 1120)	Loss: 0.580471
+Step #150 (total examples = 1200)	Loss: 0.240830
+Step #160 (total examples = 1280)	Loss: 0.326071
+Step #170 (total examples = 1360)	Loss: 0.053828
+Step #180 (total examples = 1440)	Loss: 0.195937
+Step #190 (total examples = 1520)	Loss: 0.086550
+Step #200 (total examples = 1600)	Loss: 0.075494
+Step #210 (total examples = 1680)	Loss: 0.039864
+Step #220 (total examples = 1760)	Loss: 0.235448
+Step #230 (total examples = 1840)	Loss: 0.115808
+Step #240 (total examples = 1920)	Loss: 0.068609
+Step #250 (total examples = 2000)	Loss: 0.014095
+Step #260 (total examples = 2080)	Loss: 0.002445
+Step #270 (total examples = 2160)	Loss: 0.139609
+Step #280 (total examples = 2240)	Loss: 0.496445
+Step #290 (total examples = 2320)	Loss: 0.048374
+Step #300 (total examples = 2400)	Loss: 0.231846
+Step #310 (total examples = 2480)	Loss: 0.030675
+Step #320 (total examples = 2560)	Loss: 0.109617
+Step #330 (total examples = 2640)	Loss: 0.570334
+Step #340 (total examples = 2720)	Loss: 0.095133
+Step #350 (total examples = 2800)	Loss: 0.043025
+Step #360 (total examples = 2880)	Loss: 0.019191
+Step #370 (total examples = 2960)	Loss: 0.013482
+Step #380 (total examples = 3040)	Loss: 0.058514
+Step #390 (total examples = 3120)	Loss: 0.026056
+Step #400 (total examples = 3200)	Loss: 0.176956
+Step #410 (total examples = 3280)	Loss: 0.068536
+Step #420 (total examples = 3360)	Loss: 0.560696
+Step #430 (total examples = 3440)	Loss: 0.049340
+Step #440 (total examples = 3520)	Loss: 0.072747
+Step #450 (total examples = 3600)	Loss: 0.004889
+Step #460 (total examples = 3680)	Loss: 0.009337
+Step #470 (total examples = 3760)	Loss: 0.009023
+Step #480 (total examples = 3840)	Loss: 0.477776
+Step #490 (total examples = 3920)	Loss: 0.203625
+Step #500 (total examples = 4000)	Loss: 0.144483
+Step #510 (total examples = 4080)	Loss: 0.018021
+Step #520 (total examples = 4160)	Loss: 0.016732
+Step #530 (total examples = 4240)	Loss: 0.056021
+Step #540 (total examples = 4320)	Loss: 0.004639
+Step #550 (total examples = 4400)	Loss: 0.015646
+Step #560 (total examples = 4480)	Loss: 0.788415
+Step #570 (total examples = 4560)	Loss: 0.198197
+Step #580 (total examples = 4640)	Loss: 0.009699
+Step #590 (total examples = 4720)	Loss: 0.092239
+Step #600 (total examples = 4800)	Loss: 0.009798
+Step #610 (total examples = 4880)	Loss: 0.259266
+Step #620 (total examples = 4960)	Loss: 0.021288
+Step #630 (total examples = 5040)	Loss: 0.011977
+Step #640 (total examples = 5120)	Loss: 0.045951
+Step #650 (total examples = 5200)	Loss: 0.027203
+Step #660 (total examples = 5280)	Loss: 0.298206
+Step #670 (total examples = 5360)	Loss: 0.911158
+Step #680 (total examples = 5440)	Loss: 0.002164
+Step #690 (total examples = 5520)	Loss: 0.025248
+Step #700 (total examples = 5600)	Loss: 0.020775
+Step #710 (total examples = 5680)	Loss: 0.007900
+Step #720 (total examples = 5760)	Loss: 0.011833
+Step #730 (total examples = 5840)	Loss: 0.070936
+Step #740 (total examples = 5920)	Loss: 0.020609
+Step #750 (total examples = 6000)	Loss: 0.148949
+Step #760 (total examples = 6080)	Loss: 0.081147
+Step #770 (total examples = 6160)	Loss: 0.008277
+Step #780 (total examples = 6240)	Loss: 0.029652
+Step #790 (total examples = 6320)	Loss: 0.163586
+Step #800 (total examples = 6400)	Loss: 0.012647
+Step #810 (total examples = 6480)	Loss: 0.175329
+Step #820 (total examples = 6560)	Loss: 0.028149
+Step #830 (total examples = 6640)	Loss: 0.179111
+Step #840 (total examples = 6720)	Loss: 0.005964
+Step #850 (total examples = 6800)	Loss: 0.024401
+Step #860 (total examples = 6880)	Loss: 0.169235
+Step #870 (total examples = 6960)	Loss: 0.024570
+Step #880 (total examples = 7040)	Loss: 0.361293
+Step #890 (total examples = 7120)	Loss: 0.812014
+Step #900 (total examples = 7200)	Loss: 0.003943
+Step #910 (total examples = 7280)	Loss: 0.041405
+Step #920 (total examples = 7360)	Loss: 0.009777
+Step #930 (total examples = 7440)	Loss: 0.314121
+Step #940 (total examples = 7520)	Loss: 0.044593
+Step #950 (total examples = 7600)	Loss: 0.067043
+Step #960 (total examples = 7680)	Loss: 0.133214
+Step #970 (total examples = 7760)	Loss: 0.268462
+Step #980 (total examples = 7840)	Loss: 0.065404
+Step #990 (total examples = 7920)	Loss: 0.006687
+  1/313 [..............................] - ETA: 1:48 - loss: 0.0000e+00 - accuracy: 1.0000  5/313 [..............................] - ETA: 5s - loss: 2.3145 - accuracy: 0.9875        9/313 [..............................] - ETA: 5s - loss: 5.7984 - accuracy: 0.9826 13/313 [>.............................] - ETA: 4s - loss: 10.2223 - accuracy: 0.9760 17/313 [>.............................] - ETA: 4s - loss: 10.8985 - accuracy: 0.9779 21/313 [=>............................] - ETA: 4s - loss: 11.5100 - accuracy: 0.9762 24/313 [=>............................] - ETA: 4s - loss: 13.4799 - accuracy: 0.9740 26/313 [=>............................] - ETA: 5s - loss: 12.4430 - accuracy: 0.9760 28/313 [=>............................] - ETA: 5s - loss: 12.6401 - accuracy: 0.9743 30/313 [=>............................] - ETA: 5s - loss: 13.8741 - accuracy: 0.9740 32/313 [==>...........................] - ETA: 5s - loss: 16.7285 - accuracy: 0.9736 34/313 [==>...........................] - ETA: 5s - loss: 16.8393 - accuracy: 0.9724 36/313 [==>...........................] - ETA: 6s - loss: 16.9795 - accuracy: 0.9714 38/313 [==>...........................] - ETA: 6s - loss: 18.8869 - accuracy: 0.9696 40/313 [==>...........................] - ETA: 6s - loss: 20.9690 - accuracy: 0.9672 42/313 [===>..........................] - ETA: 6s - loss: 22.2491 - accuracy: 0.9650 44/313 [===>..........................] - ETA: 6s - loss: 22.3016 - accuracy: 0.9638 46/313 [===>..........................] - ETA: 6s - loss: 21.5496 - accuracy: 0.9640 48/313 [===>..........................] - ETA: 6s - loss: 22.5835 - accuracy: 0.9622 50/313 [===>..........................] - ETA: 6s - loss: 22.1888 - accuracy: 0.9619 52/313 [===>..........................] - ETA: 6s - loss: 21.3354 - accuracy: 0.9633 54/313 [====>.........................] - ETA: 6s - loss: 23.3164 - accuracy: 0.9612 56/313 [====>.........................] - ETA: 6s - loss: 23.5467 - accuracy: 0.9615 60/313 [====>.........................] - ETA: 6s - loss: 22.7067 - accuracy: 0.9630 64/313 [=====>........................] - ETA: 5s - loss: 23.0719 - accuracy: 0.9624 68/313 [=====>........................] - ETA: 5s - loss: 26.4915 - accuracy: 0.9600 72/313 [=====>........................] - ETA: 5s - loss: 26.3419 - accuracy: 0.9601 76/313 [======>.......................] - ETA: 5s - loss: 25.8326 - accuracy: 0.9605 80/313 [======>.......................] - ETA: 5s - loss: 25.2968 - accuracy: 0.9617 84/313 [=======>......................] - ETA: 5s - loss: 25.2842 - accuracy: 0.9621 88/313 [=======>......................] - ETA: 4s - loss: 25.0308 - accuracy: 0.9624 91/313 [=======>......................] - ETA: 4s - loss: 25.1332 - accuracy: 0.9626 95/313 [========>.....................] - ETA: 4s - loss: 24.7119 - accuracy: 0.9622 99/313 [========>.....................] - ETA: 4s - loss: 24.7692 - accuracy: 0.9621103/313 [========>.....................] - ETA: 4s - loss: 24.0277 - accuracy: 0.9627107/313 [=========>....................] - ETA: 4s - loss: 23.5765 - accuracy: 0.9632111/313 [=========>....................] - ETA: 4s - loss: 23.9706 - accuracy: 0.9631115/313 [==========>...................] - ETA: 4s - loss: 24.5682 - accuracy: 0.9628119/313 [==========>...................] - ETA: 3s - loss: 24.7004 - accuracy: 0.9617123/313 [==========>...................] - ETA: 3s - loss: 24.7806 - accuracy: 0.9616127/313 [===========>..................] - ETA: 3s - loss: 24.3698 - accuracy: 0.9621131/313 [===========>..................] - ETA: 3s - loss: 24.7039 - accuracy: 0.9621135/313 [===========>..................] - ETA: 3s - loss: 24.9999 - accuracy: 0.9609139/313 [============>.................] - ETA: 3s - loss: 24.7910 - accuracy: 0.9611143/313 [============>.................] - ETA: 3s - loss: 24.9201 - accuracy: 0.9607147/313 [=============>................] - ETA: 3s - loss: 24.6279 - accuracy: 0.9605151/313 [=============>................] - ETA: 3s - loss: 24.9371 - accuracy: 0.9601155/313 [=============>................] - ETA: 3s - loss: 24.7910 - accuracy: 0.9601159/313 [==============>...............] - ETA: 2s - loss: 24.2636 - accuracy: 0.9607163/313 [==============>...............] - ETA: 2s - loss: 23.9083 - accuracy: 0.9615166/313 [==============>...............] - ETA: 2s - loss: 23.5825 - accuracy: 0.9618169/313 [===============>..............] - ETA: 2s - loss: 23.1639 - accuracy: 0.9625172/313 [===============>..............] - ETA: 2s - loss: 22.7599 - accuracy: 0.9631175/313 [===============>..............] - ETA: 2s - loss: 22.3697 - accuracy: 0.9638178/313 [================>.............] - ETA: 2s - loss: 22.1891 - accuracy: 0.9640181/313 [================>.............] - ETA: 2s - loss: 21.8445 - accuracy: 0.9644184/313 [================>.............] - ETA: 2s - loss: 21.6951 - accuracy: 0.9643187/313 [================>.............] - ETA: 2s - loss: 22.3999 - accuracy: 0.9634190/313 [=================>............] - ETA: 2s - loss: 22.4940 - accuracy: 0.9632193/313 [=================>............] - ETA: 2s - loss: 22.5913 - accuracy: 0.9628196/313 [=================>............] - ETA: 2s - loss: 22.2657 - accuracy: 0.9632199/313 [==================>...........] - ETA: 2s - loss: 21.9300 - accuracy: 0.9637202/313 [==================>...........] - ETA: 2s - loss: 21.6043 - accuracy: 0.9643205/313 [==================>...........] - ETA: 2s - loss: 21.6826 - accuracy: 0.9645208/313 [==================>...........] - ETA: 1s - loss: 21.7512 - accuracy: 0.9642211/313 [===================>..........] - ETA: 1s - loss: 21.6178 - accuracy: 0.9645214/313 [===================>..........] - ETA: 1s - loss: 21.3465 - accuracy: 0.9648217/313 [===================>..........] - ETA: 1s - loss: 21.0514 - accuracy: 0.9653220/313 [====================>.........] - ETA: 1s - loss: 20.7644 - accuracy: 0.9658223/313 [====================>.........] - ETA: 1s - loss: 20.6710 - accuracy: 0.9659226/313 [====================>.........] - ETA: 1s - loss: 20.3967 - accuracy: 0.9664229/313 [====================>.........] - ETA: 1s - loss: 20.1514 - accuracy: 0.9667232/313 [=====================>........] - ETA: 1s - loss: 19.8908 - accuracy: 0.9671235/313 [=====================>........] - ETA: 1s - loss: 20.0010 - accuracy: 0.9672238/313 [=====================>........] - ETA: 1s - loss: 19.7489 - accuracy: 0.9676242/313 [======================>.......] - ETA: 1s - loss: 19.4225 - accuracy: 0.9681245/313 [======================>.......] - ETA: 1s - loss: 19.2092 - accuracy: 0.9682248/313 [======================>.......] - ETA: 1s - loss: 18.9915 - accuracy: 0.9685251/313 [=======================>......] - ETA: 1s - loss: 18.7645 - accuracy: 0.9689254/313 [=======================>......] - ETA: 1s - loss: 18.5852 - accuracy: 0.9691257/313 [=======================>......] - ETA: 1s - loss: 18.3685 - accuracy: 0.9694260/313 [=======================>......] - ETA: 0s - loss: 18.1566 - accuracy: 0.9697263/313 [========================>.....] - ETA: 0s - loss: 17.9925 - accuracy: 0.9699266/313 [========================>.....] - ETA: 0s - loss: 17.8386 - accuracy: 0.9702269/313 [========================>.....] - ETA: 0s - loss: 17.8379 - accuracy: 0.9700272/313 [=========================>....] - ETA: 0s - loss: 17.6412 - accuracy: 0.9704275/313 [=========================>....] - ETA: 0s - loss: 17.4488 - accuracy: 0.9707279/313 [=========================>....] - ETA: 0s - loss: 17.1986 - accuracy: 0.9711283/313 [==========================>...] - ETA: 0s - loss: 17.5106 - accuracy: 0.9711287/313 [==========================>...] - ETA: 0s - loss: 17.2666 - accuracy: 0.9715291/313 [==========================>...] - ETA: 0s - loss: 17.0293 - accuracy: 0.9719295/313 [===========================>..] - ETA: 0s - loss: 16.8160 - accuracy: 0.9721299/313 [===========================>..] - ETA: 0s - loss: 16.5911 - accuracy: 0.9725303/313 [============================>.] - ETA: 0s - loss: 16.4974 - accuracy: 0.9723307/313 [============================>.] - ETA: 0s - loss: 16.8041 - accuracy: 0.9720311/313 [============================>.] - ETA: 0s - loss: 17.0185 - accuracy: 0.9716313/313 [==============================] - 6s 18ms/step - loss: 16.9680 - accuracy: 0.9716
+Final model accuracy: 0.971600
+Total training time: 90.462385
+2021-12-03 20:15:59.441544: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:15:59.441725: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:15:59.522146: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:15:59.522283: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-03 20:16:03.741315: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2021-12-03 20:16:03.741494: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu-0001
+2021-12-03 20:16:03.741544: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu-0001
+2021-12-03 20:16:03.741647: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 465.19.1
+2021-12-03 20:16:03.741733: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 465.19.1
+2021-12-03 20:16:03.741809: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 465.19.1
+2021-12-03 20:16:03.742759: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-12-03 20:16:03.765740: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/apps/software/lang/Python/3.7.2-intel-2018.5.274/lib:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib64:/opt/apps/software/lib/libffi/3.2.1-GCCcore-6.3.0/lib:/opt/apps/software/math/GMP/6.1.2-GCCcore-6.3.0/lib:/opt/apps/software/tools/XZ/5.2.4-GCCcore-6.3.0/lib:/opt/apps/software/devel/SQLite/3.27.2-GCCcore-6.3.0/lib:/opt/apps/software/lang/Tcl/8.6.9-GCCcore-6.3.0/lib:/opt/apps/software/devel/ncurses/6.1-intel-2018.5.274/lib:/opt/apps/software/lib/libreadline/7.0-GCCcore-6.3.0/lib:/opt/apps/software/lib/zlib/1.2.11-GCCcore-6.3.0/lib:/opt/apps/software/tools/bzip2/1.0.6/lib:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/mkl/lib/intel64:/opt/apps/software/numlib/imkl/2018.4.274-iimpi-2018.4.274/lib/intel64:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/lib64:/opt/apps/software/lib/libfabric/1.9.1/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64:/opt/apps/software/compiler/ifort/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/debugger_2018/libipt/intel64/lib:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/tbb/lib/intel64/gcc4.4:/opt/apps/software/compiler/icc/2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/compiler/lib/intel64:/opt/apps/software/tools/binutils/2.26-GCCcore-6.3.0/lib:/opt/apps/software/compiler/GCCcore/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0:/opt/apps/software/compiler/GCCcore/6.3.0/lib64:/opt/apps/software/compiler/GCCcore/6.3.0/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/intel64/lib:/opt/apps/software/mpi/impi/2018.4.274-iccifort-2018.5.274-GCC-6.3.0-2.26/compilers_and_libraries_2018.5.274/linux/mpi/mic/lib
+2021-12-03 20:16:03.765881: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-12-03 20:16:03.765950: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node-0001): /proc/driver/nvidia/version does not exist
+===========
+rank: 1
+===========
+Step #0 (total examples = 0)	Loss: 2.316502
+Step #10 (total examples = 80)	Loss: 1.505389
+Step #20 (total examples = 160)	Loss: 1.316768
+Step #30 (total examples = 240)	Loss: 0.425970
+Step #40 (total examples = 320)	Loss: 0.354055
+Step #50 (total examples = 400)	Loss: 0.371862
+Step #60 (total examples = 480)	Loss: 0.466688
+Step #70 (total examples = 560)	Loss: 0.633670
+Step #80 (total examples = 640)	Loss: 0.282223
+Step #90 (total examples = 720)	Loss: 0.096513
+Step #100 (total examples = 800)	Loss: 0.127619
+Step #110 (total examples = 880)	Loss: 0.069223
+Step #120 (total examples = 960)	Loss: 1.266669
+Step #130 (total examples = 1040)	Loss: 0.052471
+Step #140 (total examples = 1120)	Loss: 0.091739
+Step #150 (total examples = 1200)	Loss: 0.090002
+Step #160 (total examples = 1280)	Loss: 0.131254
+Step #170 (total examples = 1360)	Loss: 0.435182
+Step #180 (total examples = 1440)	Loss: 0.148759
+Step #190 (total examples = 1520)	Loss: 0.027155
+Step #200 (total examples = 1600)	Loss: 0.160377
+Step #210 (total examples = 1680)	Loss: 0.193214
+Step #220 (total examples = 1760)	Loss: 0.468487
+Step #230 (total examples = 1840)	Loss: 0.027635
+Step #240 (total examples = 1920)	Loss: 0.028936
+Step #250 (total examples = 2000)	Loss: 0.062406
+Step #260 (total examples = 2080)	Loss: 0.891685
+Step #270 (total examples = 2160)	Loss: 0.005597
+Step #280 (total examples = 2240)	Loss: 0.439458
+Step #290 (total examples = 2320)	Loss: 0.123304
+Step #300 (total examples = 2400)	Loss: 0.019404
+Step #310 (total examples = 2480)	Loss: 0.102478
+Step #320 (total examples = 2560)	Loss: 0.228828
+Step #330 (total examples = 2640)	Loss: 0.051588
+Step #340 (total examples = 2720)	Loss: 0.010332
+Step #350 (total examples = 2800)	Loss: 0.071289
+Step #360 (total examples = 2880)	Loss: 0.008676
+Step #370 (total examples = 2960)	Loss: 0.042621
+Step #380 (total examples = 3040)	Loss: 0.023445
+Step #390 (total examples = 3120)	Loss: 0.002462
+Step #400 (total examples = 3200)	Loss: 0.020394
+Step #410 (total examples = 3280)	Loss: 0.067767
+Step #420 (total examples = 3360)	Loss: 0.036410
+Step #430 (total examples = 3440)	Loss: 0.284107
+Step #440 (total examples = 3520)	Loss: 0.004495
+Step #450 (total examples = 3600)	Loss: 0.246687
+Step #460 (total examples = 3680)	Loss: 0.077461
+Step #470 (total examples = 3760)	Loss: 0.152752
+Step #480 (total examples = 3840)	Loss: 0.092617
+Step #490 (total examples = 3920)	Loss: 1.199813
+Step #500 (total examples = 4000)	Loss: 0.116304
+Step #510 (total examples = 4080)	Loss: 0.075363
+Step #520 (total examples = 4160)	Loss: 0.087536
+Step #530 (total examples = 4240)	Loss: 0.044131
+Step #540 (total examples = 4320)	Loss: 0.102480
+Step #550 (total examples = 4400)	Loss: 0.122797
+Step #560 (total examples = 4480)	Loss: 0.035520
+Step #570 (total examples = 4560)	Loss: 0.029447
+Step #580 (total examples = 4640)	Loss: 0.280126
+Step #590 (total examples = 4720)	Loss: 0.195847
+Step #600 (total examples = 4800)	Loss: 0.583430
+Step #610 (total examples = 4880)	Loss: 0.444826
+Step #620 (total examples = 4960)	Loss: 0.295766
+Step #630 (total examples = 5040)	Loss: 0.112967
+Step #640 (total examples = 5120)	Loss: 0.435813
+Step #650 (total examples = 5200)	Loss: 0.147384
+Step #660 (total examples = 5280)	Loss: 0.217489
+Step #670 (total examples = 5360)	Loss: 0.032850
+Step #680 (total examples = 5440)	Loss: 1.314649
+Step #690 (total examples = 5520)	Loss: 0.008508
+Step #700 (total examples = 5600)	Loss: 0.134612
+Step #710 (total examples = 5680)	Loss: 0.070967
+Step #720 (total examples = 5760)	Loss: 0.028081
+Step #730 (total examples = 5840)	Loss: 0.232786
+Step #740 (total examples = 5920)	Loss: 0.057612
+Step #750 (total examples = 6000)	Loss: 1.623498
+Step #760 (total examples = 6080)	Loss: 0.103266
+Step #770 (total examples = 6160)	Loss: 0.014653
+Step #780 (total examples = 6240)	Loss: 0.133445
+Step #790 (total examples = 6320)	Loss: 0.076173
+Step #800 (total examples = 6400)	Loss: 0.023390
+Step #810 (total examples = 6480)	Loss: 0.068183
+Step #820 (total examples = 6560)	Loss: 0.144755
+Step #830 (total examples = 6640)	Loss: 0.206612
+Step #840 (total examples = 6720)	Loss: 0.013052
+Step #850 (total examples = 6800)	Loss: 0.094123
+Step #860 (total examples = 6880)	Loss: 0.038450
+Step #870 (total examples = 6960)	Loss: 0.036335
+Step #880 (total examples = 7040)	Loss: 0.156306
+Step #890 (total examples = 7120)	Loss: 1.179942
+Step #900 (total examples = 7200)	Loss: 0.017474
+Step #910 (total examples = 7280)	Loss: 0.110044
+Step #920 (total examples = 7360)	Loss: 0.176353
+Step #930 (total examples = 7440)	Loss: 0.084008
+Step #940 (total examples = 7520)	Loss: 0.502896
+Step #950 (total examples = 7600)	Loss: 0.148378
+Step #960 (total examples = 7680)	Loss: 0.038467
+Step #970 (total examples = 7760)	Loss: 0.010445
+Step #980 (total examples = 7840)	Loss: 0.226178
+Step #990 (total examples = 7920)	Loss: 0.435103
+===========
+rank: 0
+Batch size: 8
+Total number of batches: 2000
+Total training examples: 16000
+Num of workers: 2
+===========
+Step #0 (total examples = 0)	Loss: 2.259093
+Step #10 (total examples = 80)	Loss: 1.872900
+Step #20 (total examples = 160)	Loss: 0.830052
+Step #30 (total examples = 240)	Loss: 0.546144
+Step #40 (total examples = 320)	Loss: 0.199183
+Step #50 (total examples = 400)	Loss: 0.174343
+Step #60 (total examples = 480)	Loss: 0.531098
+Step #70 (total examples = 560)	Loss: 0.196426
+Step #80 (total examples = 640)	Loss: 0.420721
+Step #90 (total examples = 720)	Loss: 0.768445
+Step #100 (total examples = 800)	Loss: 0.374374
+Step #110 (total examples = 880)	Loss: 0.091476
+Step #120 (total examples = 960)	Loss: 0.282597
+Step #130 (total examples = 1040)	Loss: 0.257967
+Step #140 (total examples = 1120)	Loss: 0.097457
+Step #150 (total examples = 1200)	Loss: 0.079161
+Step #160 (total examples = 1280)	Loss: 0.122693
+Step #170 (total examples = 1360)	Loss: 0.010306
+Step #180 (total examples = 1440)	Loss: 0.052417
+Step #190 (total examples = 1520)	Loss: 0.070782
+Step #200 (total examples = 1600)	Loss: 0.109836
+Step #210 (total examples = 1680)	Loss: 0.069816
+Step #220 (total examples = 1760)	Loss: 0.451648
+Step #230 (total examples = 1840)	Loss: 0.173263
+Step #240 (total examples = 1920)	Loss: 0.022891
+Step #250 (total examples = 2000)	Loss: 0.010035
+Step #260 (total examples = 2080)	Loss: 0.003567
+Step #270 (total examples = 2160)	Loss: 0.210988
+Step #280 (total examples = 2240)	Loss: 0.158774
+Step #290 (total examples = 2320)	Loss: 0.396585
+Step #300 (total examples = 2400)	Loss: 0.059273
+Step #310 (total examples = 2480)	Loss: 0.071612
+Step #320 (total examples = 2560)	Loss: 0.177329
+Step #330 (total examples = 2640)	Loss: 0.367853
+Step #340 (total examples = 2720)	Loss: 0.024930
+Step #350 (total examples = 2800)	Loss: 0.069636
+Step #360 (total examples = 2880)	Loss: 0.050312
+Step #370 (total examples = 2960)	Loss: 0.286756
+Step #380 (total examples = 3040)	Loss: 0.140476
+Step #390 (total examples = 3120)	Loss: 0.008698
+Step #400 (total examples = 3200)	Loss: 0.148491
+Step #410 (total examples = 3280)	Loss: 0.129997
+Step #420 (total examples = 3360)	Loss: 0.143431
+Step #430 (total examples = 3440)	Loss: 0.070344
+Step #440 (total examples = 3520)	Loss: 0.078318
+Step #450 (total examples = 3600)	Loss: 0.013205
+Step #460 (total examples = 3680)	Loss: 0.001600
+Step #470 (total examples = 3760)	Loss: 0.079689
+Step #480 (total examples = 3840)	Loss: 1.032979
+Step #490 (total examples = 3920)	Loss: 0.566924
+Step #500 (total examples = 4000)	Loss: 0.084538
+Step #510 (total examples = 4080)	Loss: 0.033709
+Step #520 (total examples = 4160)	Loss: 0.005486
+Step #530 (total examples = 4240)	Loss: 0.011586
+Step #540 (total examples = 4320)	Loss: 0.013238
+Step #550 (total examples = 4400)	Loss: 0.008112
+Step #560 (total examples = 4480)	Loss: 0.118393
+Step #570 (total examples = 4560)	Loss: 0.398885
+Step #580 (total examples = 4640)	Loss: 0.014913
+Step #590 (total examples = 4720)	Loss: 0.047737
+Step #600 (total examples = 4800)	Loss: 0.101037
+Step #610 (total examples = 4880)	Loss: 0.072524
+Step #620 (total examples = 4960)	Loss: 0.150018
+Step #630 (total examples = 5040)	Loss: 0.117556
+Step #640 (total examples = 5120)	Loss: 0.063840
+Step #650 (total examples = 5200)	Loss: 0.086724
+Step #660 (total examples = 5280)	Loss: 0.217094
+Step #670 (total examples = 5360)	Loss: 1.489314
+Step #680 (total examples = 5440)	Loss: 0.013017
+Step #690 (total examples = 5520)	Loss: 0.046188
+Step #700 (total examples = 5600)	Loss: 0.032813
+Step #710 (total examples = 5680)	Loss: 0.022816
+Step #720 (total examples = 5760)	Loss: 0.378952
+Step #730 (total examples = 5840)	Loss: 0.010594
+Step #740 (total examples = 5920)	Loss: 0.009909
+Step #750 (total examples = 6000)	Loss: 0.127026
+Step #760 (total examples = 6080)	Loss: 0.064450
+Step #770 (total examples = 6160)	Loss: 0.010104
+Step #780 (total examples = 6240)	Loss: 0.404428
+Step #790 (total examples = 6320)	Loss: 0.008939
+Step #800 (total examples = 6400)	Loss: 0.025265
+Step #810 (total examples = 6480)	Loss: 0.234696
+Step #820 (total examples = 6560)	Loss: 0.108594
+Step #830 (total examples = 6640)	Loss: 0.579534
+Step #840 (total examples = 6720)	Loss: 0.049814
+Step #850 (total examples = 6800)	Loss: 0.167266
+Step #860 (total examples = 6880)	Loss: 0.881631
+Step #870 (total examples = 6960)	Loss: 0.032568
+Step #880 (total examples = 7040)	Loss: 0.650495
+Step #890 (total examples = 7120)	Loss: 0.923447
+Step #900 (total examples = 7200)	Loss: 0.029073
+Step #910 (total examples = 7280)	Loss: 0.050804
+Step #920 (total examples = 7360)	Loss: 0.001898
+Step #930 (total examples = 7440)	Loss: 0.058201
+Step #940 (total examples = 7520)	Loss: 0.003255
+Step #950 (total examples = 7600)	Loss: 0.082744
+Step #960 (total examples = 7680)	Loss: 0.305256
+Step #970 (total examples = 7760)	Loss: 0.267672
+Step #980 (total examples = 7840)	Loss: 0.018023
+Step #990 (total examples = 7920)	Loss: 0.041505
+  1/313 [..............................] - ETA: 1:50 - loss: 0.0000e+00 - accuracy: 1.0000  5/313 [..............................] - ETA: 5s - loss: 5.0137 - accuracy: 0.9812        8/313 [..............................] - ETA: 5s - loss: 4.4810 - accuracy: 0.9844 11/313 [>.............................] - ETA: 5s - loss: 15.2526 - accuracy: 0.9744 15/313 [>.............................] - ETA: 4s - loss: 16.9803 - accuracy: 0.9688 19/313 [>.............................] - ETA: 4s - loss: 16.6014 - accuracy: 0.9671 22/313 [=>............................] - ETA: 4s - loss: 15.7157 - accuracy: 0.9659 24/313 [=>............................] - ETA: 5s - loss: 17.7691 - accuracy: 0.9635 26/313 [=>............................] - ETA: 5s - loss: 16.4289 - accuracy: 0.9651 28/313 [=>............................] - ETA: 5s - loss: 16.2586 - accuracy: 0.9665 30/313 [=>............................] - ETA: 6s - loss: 18.9449 - accuracy: 0.9646 32/313 [==>...........................] - ETA: 6s - loss: 22.1318 - accuracy: 0.9629 34/313 [==>...........................] - ETA: 6s - loss: 21.8411 - accuracy: 0.9614 36/313 [==>...........................] - ETA: 6s - loss: 21.5624 - accuracy: 0.9609 38/313 [==>...........................] - ETA: 6s - loss: 21.8608 - accuracy: 0.9589 40/313 [==>...........................] - ETA: 6s - loss: 22.7337 - accuracy: 0.9555 42/313 [===>..........................] - ETA: 6s - loss: 23.5032 - accuracy: 0.9554 44/313 [===>..........................] - ETA: 6s - loss: 23.1815 - accuracy: 0.9560 46/313 [===>..........................] - ETA: 6s - loss: 23.1097 - accuracy: 0.9558 48/313 [===>..........................] - ETA: 6s - loss: 22.9305 - accuracy: 0.9557 50/313 [===>..........................] - ETA: 6s - loss: 23.1635 - accuracy: 0.9550 52/313 [===>..........................] - ETA: 6s - loss: 22.2726 - accuracy: 0.9567 55/313 [====>.........................] - ETA: 6s - loss: 23.7320 - accuracy: 0.9557 59/313 [====>.........................] - ETA: 6s - loss: 22.9088 - accuracy: 0.9566 63/313 [=====>........................] - ETA: 6s - loss: 22.6795 - accuracy: 0.9568 67/313 [=====>........................] - ETA: 5s - loss: 27.4758 - accuracy: 0.9529 71/313 [=====>........................] - ETA: 5s - loss: 27.2318 - accuracy: 0.9529 75/313 [======>.......................] - ETA: 5s - loss: 27.6927 - accuracy: 0.9504 79/313 [======>.......................] - ETA: 5s - loss: 27.3188 - accuracy: 0.9513 83/313 [======>.......................] - ETA: 5s - loss: 27.5621 - accuracy: 0.9507 87/313 [=======>......................] - ETA: 4s - loss: 26.8936 - accuracy: 0.9508 91/313 [=======>......................] - ETA: 4s - loss: 27.0655 - accuracy: 0.9505 95/313 [========>.....................] - ETA: 4s - loss: 26.8994 - accuracy: 0.9503 99/313 [========>.....................] - ETA: 4s - loss: 26.2500 - accuracy: 0.9511103/313 [========>.....................] - ETA: 4s - loss: 26.1796 - accuracy: 0.9515107/313 [=========>....................] - ETA: 4s - loss: 25.5709 - accuracy: 0.9524111/313 [=========>....................] - ETA: 4s - loss: 26.0848 - accuracy: 0.9519115/313 [==========>...................] - ETA: 4s - loss: 26.2339 - accuracy: 0.9519119/313 [==========>...................] - ETA: 3s - loss: 26.4717 - accuracy: 0.9512123/313 [==========>...................] - ETA: 3s - loss: 27.1449 - accuracy: 0.9510127/313 [===========>..................] - ETA: 3s - loss: 26.5655 - accuracy: 0.9515131/313 [===========>..................] - ETA: 3s - loss: 26.5602 - accuracy: 0.9518135/313 [===========>..................] - ETA: 3s - loss: 26.5527 - accuracy: 0.9516139/313 [============>.................] - ETA: 3s - loss: 26.1691 - accuracy: 0.9519143/313 [============>.................] - ETA: 3s - loss: 26.5188 - accuracy: 0.9517147/313 [=============>................] - ETA: 3s - loss: 26.2502 - accuracy: 0.9522151/313 [=============>................] - ETA: 3s - loss: 26.3261 - accuracy: 0.9522155/313 [=============>................] - ETA: 3s - loss: 26.2217 - accuracy: 0.9520159/313 [==============>...............] - ETA: 2s - loss: 25.6014 - accuracy: 0.9530163/313 [==============>...............] - ETA: 2s - loss: 25.2708 - accuracy: 0.9534167/313 [===============>..............] - ETA: 2s - loss: 24.8772 - accuracy: 0.9538171/313 [===============>..............] - ETA: 2s - loss: 24.3908 - accuracy: 0.9545175/313 [===============>..............] - ETA: 2s - loss: 23.8333 - accuracy: 0.9555179/313 [================>.............] - ETA: 2s - loss: 23.3735 - accuracy: 0.9560183/313 [================>.............] - ETA: 2s - loss: 22.8966 - accuracy: 0.9568187/313 [================>.............] - ETA: 2s - loss: 23.3486 - accuracy: 0.9560191/313 [=================>............] - ETA: 2s - loss: 23.3095 - accuracy: 0.9558195/313 [=================>............] - ETA: 2s - loss: 23.2025 - accuracy: 0.9559199/313 [==================>...........] - ETA: 2s - loss: 22.7362 - accuracy: 0.9568203/313 [==================>...........] - ETA: 2s - loss: 22.3876 - accuracy: 0.9575207/313 [==================>...........] - ETA: 1s - loss: 22.3296 - accuracy: 0.9582211/313 [===================>..........] - ETA: 1s - loss: 22.2515 - accuracy: 0.9582215/313 [===================>..........] - ETA: 1s - loss: 21.8575 - accuracy: 0.9589219/313 [===================>..........] - ETA: 1s - loss: 21.4582 - accuracy: 0.9596223/313 [====================>.........] - ETA: 1s - loss: 21.2681 - accuracy: 0.9601227/313 [====================>.........] - ETA: 1s - loss: 21.0178 - accuracy: 0.9605231/313 [=====================>........] - ETA: 1s - loss: 20.6539 - accuracy: 0.9612235/313 [=====================>........] - ETA: 1s - loss: 20.4849 - accuracy: 0.9609239/313 [=====================>........] - ETA: 1s - loss: 20.1421 - accuracy: 0.9616243/313 [======================>.......] - ETA: 1s - loss: 19.8105 - accuracy: 0.9622247/313 [======================>.......] - ETA: 1s - loss: 19.4958 - accuracy: 0.9627251/313 [=======================>......] - ETA: 1s - loss: 19.2084 - accuracy: 0.9630255/313 [=======================>......] - ETA: 1s - loss: 18.9877 - accuracy: 0.9634259/313 [=======================>......] - ETA: 0s - loss: 18.7643 - accuracy: 0.9638263/313 [========================>.....] - ETA: 0s - loss: 18.4790 - accuracy: 0.9644267/313 [========================>.....] - ETA: 0s - loss: 18.3432 - accuracy: 0.9645271/313 [========================>.....] - ETA: 0s - loss: 18.1184 - accuracy: 0.9648275/313 [=========================>....] - ETA: 0s - loss: 17.8549 - accuracy: 0.9653279/313 [=========================>....] - ETA: 0s - loss: 17.5989 - accuracy: 0.9658283/313 [==========================>...] - ETA: 0s - loss: 17.6466 - accuracy: 0.9659287/313 [==========================>...] - ETA: 0s - loss: 17.4007 - accuracy: 0.9664291/313 [==========================>...] - ETA: 0s - loss: 17.2267 - accuracy: 0.9666295/313 [===========================>..] - ETA: 0s - loss: 17.0803 - accuracy: 0.9667299/313 [===========================>..] - ETA: 0s - loss: 16.9597 - accuracy: 0.9669303/313 [============================>.] - ETA: 0s - loss: 16.9297 - accuracy: 0.9669307/313 [============================>.] - ETA: 0s - loss: 17.6136 - accuracy: 0.9662311/313 [============================>.] - ETA: 0s - loss: 17.8368 - accuracy: 0.9658313/313 [==============================] - 6s 17ms/step - loss: 17.7651 - accuracy: 0.9659
+Final model accuracy: 0.965900
+Total training time: 91.424803
