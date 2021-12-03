@@ -5,6 +5,8 @@ import tensorflow as tf
 import horovod.tensorflow as hvd
 from tensorflow._api.v2 import data
 from tensorflow.python.types.core import Value
+import time
+
 
 # DEFAULT TRAINING SETTINGS
 total_training_batches = 100
@@ -68,8 +70,6 @@ mnist_model = tf.keras.Sequential([
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Dense(10)
 ])
-
-
 # Define optimizer
 loss = tf.losses.SparseCategoricalCrossentropy(from_logits=True)
 opt = tf.optimizers.Adam(0.001 * hvd.size())
@@ -104,6 +104,9 @@ def training_step(images, labels, first_batch):
 
     return loss_value
 
+if hvd.rank() == 0:
+    start = time.time()
+
 # Split total number of training batches across all workers
 for batch_num, (images, labels) in enumerate(dataset.take(total_training_batches // hvd.size())):
     loss_value = training_step(images, labels, batch_num == 0)
@@ -117,8 +120,8 @@ for batch_num, (images, labels) in enumerate(dataset.take(total_training_batches
 # The checkpoint will not be automatically loaded, 
 # So all trials are independent from each other
 if hvd.rank() == 0:
-    checkpoint.save(checkpoint_dir)
-
+    # checkpoint.save(checkpoint_dir)
+    end = time.time()
     # Evaluate final model with unseen test data from MNIST (10000 examples)
     _, (test_images, test_labels)= \
         tf.keras.datasets.mnist.load_data(path='mnist-2.npz')
@@ -126,3 +129,4 @@ if hvd.rank() == 0:
     results = mnist_model.evaluate(test_images, test_labels, return_dict=True)
     accuracy = results["accuracy"]
     print('Final model accuracy: %.6f' % (accuracy))
+    print('Total training time: %.6f' % (end - start))
