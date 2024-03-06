@@ -59,7 +59,3 @@ Contributions to improve the project are welcome. Please ensure to follow the ex
 ## License
 
 This project is open-sourced under the MIT License. See the LICENSE file for more details.
-
----
-
-This README provides a comprehensive guide to running and understanding the distributed MNIST training project. It outlines the project's features, requirements, setup, usage, and the model architecture, making it accessible for both beginners and experienced practitioners interested in distributed deep learning.
